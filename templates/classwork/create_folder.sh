@@ -1,3 +1,3 @@
-mkdir Knn
-cp ./* ././Knn/
+mkdir ../../Knn
+cp ./* ../../Knn/
 exit
