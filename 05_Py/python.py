@@ -25,5 +25,3 @@ if pd_chosen == 1:
 	print("Name: " + pd1[name_index])
 else:
 	print("Name: " + pd2[name_index])
-
-##exec("""print("Name: " + pd""" + str(pd_chosen) + "[" + str(name_index) + "])") #would've preferred a dict but specifications say use 2 vars
