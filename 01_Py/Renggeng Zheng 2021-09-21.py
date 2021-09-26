@@ -1,8 +1,7 @@
 #Renggeng Zheng
 #SoftDev
-#K01 -- SoftDev Name Printing 
+#K01 -- SoftDev Name Printing
 #2021-09-21
-
 
 ##enables debug print statements
 DEBUG = True
