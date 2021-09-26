@@ -1,5 +1,8 @@
-# works if you run from root director
-mkdir nn_Py
+echo "which assignment is this: "
+read assignment_num
+directory="$assignment_num""_Py"
+# works if you run from root directory
+mkdir "$directory"
 #rsync used because cp does not work
-rsync templates/classwork/* nn_Py --exclude "create_folder.sh"
+rsync templates/classwork/* "$directory" --exclude "create_folder.sh"
 exit
