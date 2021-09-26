@@ -1,4 +1,5 @@
-mkdir ../../Knn
+# works if you run from root director
+mkdir nn_Py
 #rsync used because cp does not work
-rsync ./* ../../Knn --exclude-from:"create_folder.sh"
+rsync templates/classwork/* nn_Py --exclude "create_folder.sh"
 exit
