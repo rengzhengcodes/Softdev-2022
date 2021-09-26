@@ -8,7 +8,7 @@ DEBUG = True
 ##if this exists as a txt you can import it, but we do not have a txt, json, csv, etc of names
 ##names are listed last, first initial b/c that is convention in most systems + sorts by last name then first name
 pd1 = open("pd1_names.txt", "r").read().strip().split("\n") #list storing names for pd1 kids imported from file.
-pd2 = ["Doe, John", "Smith, John", "Name, Test"] #list storing names for pd2 kids (not imported because list does not exist)
+pd2 = open("pd2_names.txt", "r").read().strip().split("\n") #list storing names for pd2 kids imported from file.
 ##sorts names if inputs are not already so they are in alphabetical order like on an attendance roster
 pd1.sort()
 pd2.sort()
