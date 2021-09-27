@@ -10,9 +10,9 @@
 ## Python does not have as rigid compile-time type checks as Java so watch out.
 ## Python also does not do string typecasting like Java.
 # QUESTIONS:
-## Would a dict not be more expandable?
+## Would a dict not be more expandable? - Written on the weekend because we thought this was the assignment.
 ## Storing and reading names from a JSON or CSV might be better if library downloads were allowed I believe?
-## exec() might be good here for the dynamism the code needs versus the lines of if else statements?
+## exec() might be good here for the dynamism the code needs versus the lines of if else statements? - Written on the weekend because we thought this was the assignment.
 # COMMENTS:
 ## Good practice in communication and group work.
 ## Good commenting makes code easier to understand.
@@ -40,7 +40,13 @@ try:
 	name_index = int(name_index) #converts input into an integer
 
 	if pd_chosen in pd.keys(): #checks period exists
-		print("Name: " + pd[pd_chosen][name_index])
+		if name_index < len(pd[pd_chosen]):
+			print("Name: " + pd[pd_chosen][name_index])
+		else:
+			from random import randrange
+			print("This name index does not exist. Choosing random name in period: ")
+			print(pd[pd_chosen][randrange(len(pd[pd_chosen]))])
+			exit(1)
 	else:
 		print("This period: " + str(pd_chosen) + " does not exist. Exiting program.")
 		exit(1)
