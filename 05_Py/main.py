@@ -39,10 +39,8 @@ try:
 	name_index = input("Input the index of the name you wish to retrieve (0-based): ") #allows CLI input to retrieve a specific name
 	name_index = int(name_index) #converts input into an integer
 
-	if pd_chosen == 1:
-		print("Name: " + pd1[name_index])
-	elif pd_chosen == 2:
-		print("Name: " + pd2[name_index])
+	if pd_chosen in pd.keys(): #checks period exists
+		print("Name: " + pd[pd_chosen][name_index])
 	else:
 		print("This period: " + str(pd_chosen) + " does not exist. Exiting program.")
 		exit(1)
@@ -51,11 +49,9 @@ try:
 except (IndexError, ValueError):
 	from random import randint,randrange #imported here so as not to cause unecessary imports if this path is not triggered
 	print("Invalid input detected. Choosing random student: ")
-	pd_chosen = randint(1,2)
-	if pd_chosen == 1:
-		print("Name: " + pd1[randrange(len(pd1))])
-	elif pd_chosen == 2:
-		print("Name: " + pd2[randrange(len(pd2))])
+	pd_chosen = tuple(pd.keys())[randrange(len(pd.keys()))]
+	if pd_chosen in pd.keys():
+		print("Name: " + pd[pd_chosen][randrange(len(pd[pd_chosen]))])
 	else: #no one should get here because of the randInt limitations so this shouldbe fine
 		print("You should not be here! Error! Error!")
 		exit(1)
