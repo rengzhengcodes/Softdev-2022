@@ -3,7 +3,7 @@
 #K05 -- Improved 01_Py with New People
 #2021-09-24
 
-# pow-wow-summary: A large list is not a maintainable solution to the issue of name storage. Error detection is needed for any input solution besides a crash to an error message as users would probably not understand it if they are laymen.
+# pow-wow-summary: A large list is not a maintainable solution to the issue of name storage. Error detection is needed for any input solution besides a crash to an error message as users would probably not understand it if they are laymen. Files are also nice as they are more laymen friendly then tinkering with the code. It also prevents introducing some errors in the code as you are limited to messing with the input rather than the entire algorithm.
 # discoveries: Print statements are good at debugging; Python does not have as rigid compile-time type checks as Java so watch out.
 # questions:
 ## Would a dict not be more expandable?
