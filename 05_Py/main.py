@@ -33,7 +33,7 @@ try:
 	elif pd_chosen == 2:
 		print("Name: " + pd2[name_index])
 	else:
-		print("This period: " + pd_chosen + " does not exist. Exiting program.")
+		print("This period: " + str(pd_chosen) + " does not exist. Exiting program.")
 		exit(1)
 	print("Exiting")
 	exit(0)
