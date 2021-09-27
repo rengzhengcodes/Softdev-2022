@@ -19,7 +19,7 @@
 ## Good formatting also enhances code readability.
 
 ##enables debug print statements
-DEBUG = True
+DEBUG = False
 ##if this exists as a txt you can import it, but we do not have a txt, json, csv, etc of names
 ##names are listed last, first initial b/c that is convention in most systems + sorts by last name then first name
 pd = {
