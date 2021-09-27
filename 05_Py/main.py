@@ -19,17 +19,19 @@
 ## Good formatting also enhances code readability.
 
 ##enables debug print statements
-DEBUG = False
+DEBUG = True
 ##if this exists as a txt you can import it, but we do not have a txt, json, csv, etc of names
 ##names are listed last, first initial b/c that is convention in most systems + sorts by last name then first name
-pd1 = open("pd1_names.txt", "r").read().strip().split("\n") #list storing names for pd1 kids imported from file.
-pd2 = open("pd2_names.txt", "r").read().strip().split("\n") #list storing names for pd2 kids imported from file.
+pd = {
+	1: open("pd1_names.txt", "r").read().strip().split("\n"), #list storing names for pd1 kids imported from file.
+	2: open("pd2_names.txt", "r").read().strip().split("\n"), #list storing names for pd2 kids imported from file.
+}
 ##sorts names if inputs are not already so they are in alphabetical order like on an attendance roster
-pd1.sort()
-pd2.sort()
+pd[1].sort()
+pd[2].sort()
 
 if DEBUG:
-	print(pd1, pd2) #checks that sort works in DEBUG mode
+	print(pd[1], pd[2]) #checks that sort works in DEBUG mode
 
 try:
 	pd_chosen = input("What period's name do you want? ") #allows CLI input for which period
