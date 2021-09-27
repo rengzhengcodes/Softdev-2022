@@ -3,16 +3,17 @@
 #K05 -- Improved 01_Py with New People
 #2021-09-24
 
-# pow-wow-summary: A large list is not a maintainable solution to the issue of name storage. Error detection is needed for any input solution besides a crash to an error message as users would probably not understand it if they are laymen. Files are also nice as they are more laymen friendly then tinkering with the code. It also prevents introducing some errors in the code as you are limited to messing with the input rather than the entire algorithm.
-# discoveries:
+# SUMMARY OF TRIO DISCUSSION:
+## A large list is not a maintainable solution to the issue of name storage. Error detection is needed for any input solution besides a crash to an error message as users would probably not understand it if they are laymen. Files are also nice as they are more laymen friendly then tinkering with the code. It also prevents introducing some errors in the code as you are limited to messing with the input rather than the entire algorithm.
+# DISCOVERIES:
 ## Print statements are good at debugging.
 ## Python does not have as rigid compile-time type checks as Java so watch out.
 ## Python also does not do string typecasting like Java.
-# questions:
+# QUESTIONS:
 ## Would a dict not be more expandable?
 ## Storing and reading names from a JSON or CSV might be better if library downloads were allowed I believe?
 ## exec() might be good here for the dynamism the code needs versus the lines of if else statements?
-# comments:
+# COMMENTS:
 ## Good practice in communication and group work.
 ## Good commenting makes code easier to understand.
 ## Good formatting also enhances code readability.
