@@ -3,7 +3,7 @@
 #K05 -- Improved 01_Py with New People
 #2021-09-24
 
-# pow-wow-summary:
+# pow-wow-summary: A large list is not a maintainable solution to the issue of name storage. Error detection is needed for any input solution besides a crash to an error message as users would probably not understand it if they are laymen.
 # discoveries: Print statements are good at debugging; Python does not have as rigid compile-time type checks as Java so watch out.
 # questions:
 ## Would a dict not be more expandable?
@@ -22,13 +22,29 @@ pd2.sort()
 
 if DEBUG:
 	print(pd1, pd2) #checks that sort works in DEBUG mode
+try:
+	pd_chosen = input("What period's name do you want? ") #allows CLI input for which period
+	pd_chosen = int(pd_chosen) #converts input into an integer
+	name_index = input("Input the index of the name you wish to retrieve (0-based): ") #allows CLI input to retrieve a specific name
+	name_index = int(name_index) #converts input into an integer
 
-pd_chosen = input("What period's name do you want? ") #allows CLI input for which period
-pd_chosen = int(pd_chosen) #converts input into an integer
-name_index = input("Input the index of the name you wish to retrieve (0-based): ") #allows CLI input to retrieve a specific name
-name_index = int(name_index) #converts input into an integer
-
-if pd_chosen == 1:
-	print("Name: " + pd1[name_index])
-else:
-	print("Name: " + pd2[name_index])
+	if pd_chosen == 1:
+		print("Name: " + pd1[name_index])
+	elif pd_chosen == 2:
+		print("Name: " + pd2[name_index])
+	else:
+		print("This period: " + pd_chosen + " does not exist. Exiting program.")
+		exit(1)
+	print("Exiting")
+	exit(0)
+except (IndexError, ValueError):
+	from random import randint,randrange #imported here so as not to cause unecessary imports if this path is not triggered
+	print("Invalid input detected. Choosing random student: ")
+	pd_chosen = randint(1,2)
+	if pd_chosen == 1:
+		print("Name: " + pd1[randrange(len(pd1))])
+	elif pd_chosen == 2:
+		print("Name: " + pd2[randrange(len(pd2))])
+	else: #no one should get here because of the randInt limitations so this shouldbe fine
+		print("You should not be here! Error! Error!")
+		exit(1)
