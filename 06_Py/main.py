@@ -24,8 +24,8 @@ for row in occupations:
 #generates a random job given a probability dict formatted {job: percentage with total at the bottom}
 def random_job(probability_book = job_percentages): #default argument provided. Valid for an assignment use case.
 	import random
-#	if DEBUG:
-#`		random.seed(a=42) #sets seed for predictable testing
+	if DEBUG:
+		random.seed(a=42) #sets seed for predictable testing
 
 	#upper bound is 100 as despite the exclusive end, we are including 0 in our set of rng numbers
 	#Step is 0.1 because that's the accuracy to which the data is to.
