@@ -4,7 +4,7 @@
 #2021-09-28
 
 #Debug variable
-DEBUG = True
+DEBUG = False
 #DEBUG PRINTER
 def debug_print(var):
 	global DEBUG
