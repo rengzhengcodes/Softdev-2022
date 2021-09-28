@@ -17,8 +17,8 @@ for job in sorted_jobs:
 	if job == "Total": #want to print this at the end for formatting clarity
 		continue
 	if job != "Other": #necessary because the job "Other" is not explicitly defined in the original
-		print(job + " : " + str(results[job] / results["Total"] * 100) + " : " + str(main.job_percentages[job]))
+		print(job + " : " + str(round(results[job] / results["Total"] * 100, 2)) + " : " + str(main.job_percentages[job]))
 	else:
-		print(job + " : " + str(results[job] / results["Total"] * 100) + " : " + "0.2")
+		print(job + " : " + str(round(results[job] / results["Total"] * 100, 2)) + " : " + "0.2")
 
 print("Total" + " : " + str(results["Total"] / results["Total"] * 100) + " : " + str(main.job_percentages["Total"]))
