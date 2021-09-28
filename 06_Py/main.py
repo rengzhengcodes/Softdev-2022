@@ -43,4 +43,4 @@ def random_job(probability_book = job_percentages): #default argument provided. 
 			return job #DC is reached, which means the number generated corresponds to thsi job, so return it.
 	return "Other" #our thing does not neatly add up to 100%, as 0.2% of people work in other industries. This is the failthrough case.
 
-print(random_job())
+print(random_job()) #this is needed for main to work but also prints on import in the test file.
