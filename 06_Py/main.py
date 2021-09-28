@@ -39,7 +39,7 @@ def random_job(probability_book = job_percentages): #default argument provided. 
 		current_dc += probability #adds the currrent probability to the probability DC
 		# strictly less than because the first number has the segment from 0 to its number.
 		# if we did <= the rest of the segments would be off by 0.1 as the first has the inclusive 0 as well.
-		if number_rolled < current_dc:
+		if number_rolled < current_dc and job != "Total":
 			return job #DC is reached, which means the number generated corresponds to thsi job, so return it.
 	return "Other" #our thing does not neatly add up to 100%, as 0.2% of people work in other industries. This is the failthrough case.
 
