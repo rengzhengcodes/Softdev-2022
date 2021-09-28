@@ -2,7 +2,7 @@
 import main
 
 results = dict()
-results["Total"] = 100000
+results["Total"] = 10000000
 for run in range(results["Total"]):
 	output = main.random_job()
 	if output in results.keys():
