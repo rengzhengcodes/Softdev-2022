@@ -11,7 +11,7 @@ A dictionary is good for mapping one non-numeric value to another value. One use
 1. Basics of github-flavoured markdown (Raison d'etre? How does one learn?)
 	a. Github markdown uses # to mark a header and multiple #'s to make smaller headers.
 	b. --- makes a line.
-	c. use "<br/>" for a new line.
+	c. use ```<br/>``` for a new line.
 2. Weighted randomization:
 	a. Need a way to tie it to a random number generator.
 	b. Need a way to keep track of the options the randomly generated number does not correspond to.
