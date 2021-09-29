@@ -9,11 +9,14 @@ File CSV io was handled with the CSV library. We used the DictReader() function 
 A dictionary is good for mapping one non-numeric value to another value. One uses a dictionary much like a list, with a key in [] mapping to a value in the dictionary.
 ## list:
 1. Basics of github-flavoured markdown (Raison d'etre? How does one learn?)
-	a. Github markdown uses # to mark a header and multiple #'s to make smaller headers.
-	b. --- makes a line.
-	c. use ```<br/>``` for a new line.
+	* Github markdown uses # to mark a header and multiple #'s to make smaller headers.
+	* --- makes a line.
+	* Use ```<br/>``` for a new line.
+	* Use 3 "\`" for code snipper inclusions
+	* Use * for bullet points.
+	* Use \\ for special characters.
 2. Weighted randomization:
-	a. Need a way to tie it to a random number generator.
-	b. Need a way to keep track of the options the randomly generated number does not correspond to.
-	c. Need a list of weights to work with.
+	* Need a way to tie it to a random number generator.
+	* Need a way to keep track of the options the randomly generated number does not correspond to.
+	* Need a list of weights to work with.
 ## Maximize Clarity
