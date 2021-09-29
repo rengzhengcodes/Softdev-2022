@@ -1,7 +1,7 @@
 # EAR (Edwin Z., Angela Z., Renggeng Z.)
-# Softdev
-# K06 -- Explanation of reading in from a CSV and weighted probabilities
-# 2021-09-29
+Softdev
+K06 -- Explanation of reading in from a CSV and weighted probabilities
+2021-09-29
 
 ## File (CSV) I/O. Mostly the I
 File CSV io was handled with the CSV library. We used the DictReader() function to read in a CSV as a dictionary. It was not in the format we liked, so used a tuple (ordered, unchangeable list) of the values of the dictionary to rearrange it and remove the data we didn't need.
