@@ -12,7 +12,7 @@ A dictionary is good for mapping one non-numeric value to another value. One use
 	* Github markdown uses # to mark a header and multiple #'s to make smaller headers.
 	* --- makes a line.
 	* Use ```<br/>``` for a new line.
-	* Use 3 "\`" for code snipper inclusions
+	* Use 3 \*** for code snipper inclusions
 	* Use * for bullet points.
 	* Use \\ for special characters.
 2. Weighted randomization:
