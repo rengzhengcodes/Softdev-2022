@@ -1,4 +1,4 @@
-# EAR (Edwin Z., Angela Z., Renggeng Z.)
+# EAR (Edwin Z., Angela Z., Renggeng Z.) Explains CSV and Weighted Probabilities
 Softdev <br/>
 K06 -- Explanation of reading in from a CSV and weighted probabilities <br/>
 2021-09-29 <br/>
