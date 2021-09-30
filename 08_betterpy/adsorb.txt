@@ -1,0 +1,16 @@
+Renggeng Zheng + Michelle Lo + Ishraq Mahid
+SoftDev
+K08 -- Visiting others' workshops + learning
+2021-09-30
+
+Questions:
+Does random.choices() use a different method than what we used?
+Why was random choosing of names so popular?
+Why does everyone use open(file) as f instead of a more compact method + comment explainer?
+Comments:
+Michelle and my group used the same adding interval method of choice.
+People seem to prefer spaces over tabs.
+random.choices() exists.
+Concerns:
+Overhead risks of importing libraries?
+People don't seem to comment very verbosely.
