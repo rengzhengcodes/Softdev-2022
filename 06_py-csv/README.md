@@ -8,14 +8,18 @@ File CSV io was handled with the CSV library. We used the DictReader() function 
 ## Dictionary: What is it good for? How does one use?
 A dictionary is good for mapping one non-numeric value to another value. One uses a dictionary much like a list, with a key in [] mapping to a value in the dictionary.
 ## list:
-1. Basics of github-flavoured markdown (Raison d'etre? How does one learn?)
+1. List:
+	* Ordered sequence of data entries.
+	* Values accessed by the notation list_name[number] where number is the subscript/index of the value you wish to access.
+	* Indexes are 0-based, meaning the first value is at index 0, second value at index 1, third value at index 2, etc.
+2. Basics of github-flavoured markdown (Raison d'etre? How does one learn?)
 	* Github markdown uses # to mark a header and multiple #'s to make smaller headers.
 	* --- makes a line.
 	* Use ```<br/>``` for a new line.
 	* Use \`\`\`code\`\`\` for code snippet inclusions
 	* Use * for bullet points.
 	* Use \\ before special characters to type them.
-2. Weighted randomization:
+3. Weighted randomization:
 	* Need a way to tie it to a random number generator.
 	* Need a way to keep track of the options the randomly generated number does not correspond to.
 	* Need a list of weights to work with.
