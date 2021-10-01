@@ -1,3 +1,11 @@
+Source: https://docs.python.org/3/tutorial/venv.html
+
 -m: module name
 venv: creates virtual environment
 ~/myherozero: venv created in root directory folder myherozero.
+A virtual environment is a way to add libraries for a module with PIP.
+  -they do this separately from global libraries, allowing you to manage which project uses which libraries.
+  -You get into a venv via the source command and a path to the activate file.
+  -You do this in the console.
+    -from prior experience, applications opened by the console with the venv open also use the venv
+    -from prior experience as well, venvs help prevent library version conflicts.
