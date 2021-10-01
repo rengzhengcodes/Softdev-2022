@@ -6,5 +6,11 @@ Flask : fast prototyping
 ## some inheritance possibilities
 # promotes code reuse
 # simplifies DB access/backend framework
+# session management possible
+
+# two modules:
+## werkzeug - common gateway interface handler
+### requests and responses
+## Jinja2 - templates
 Apache : can drop in a flask thing into apache to take advantage of its higher industrial-grade serving capabilities
 
