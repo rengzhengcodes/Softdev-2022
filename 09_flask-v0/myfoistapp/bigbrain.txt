@@ -1,0 +1,12 @@
+Q0: Where have you seen similar syntax in other langs?
+This seems like the class creation in java.
+Q1: What points of reference do you have for meaning of '/'?
+This is the header for path files, so its likely specifying that the root file for the website is here (and relative)
+Q2: Where will this print to?
+print() prints to console.
+Q3: What will it print?
+It will print the '__name__' variable
+Q3: Will this appear anywhere? How u know?
+No it will not appear anywhere, because we never called it again. If it did, it would be in the console, because that's what print() does.
+Q4: Where have you seen similar construcs in other languages?
+This again seems very javaonic and reminiscent of the time I used JavaFX.
