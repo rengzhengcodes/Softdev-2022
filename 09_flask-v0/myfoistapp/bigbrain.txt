@@ -15,3 +15,5 @@ Q3: Will this appear anywhere? How u know?
 No it will not appear anywhere, because we never called it again. If it did, it would be in the console, because that's what print() does.
 Q4: Where have you seen similar construcs in other languages?
 This again seems very javaonic and reminiscent of the time I used JavaFX.
+
+Notes:
