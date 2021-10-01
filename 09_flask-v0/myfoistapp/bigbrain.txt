@@ -1,3 +1,8 @@
+ER - Edwin Z. Renggeng Z.
+SoftDev
+K09 -- Learning flask day 1
+2021-10-01
+
 Q0: Where have you seen similar syntax in other langs?
 This seems like the class creation in java.
 Q1: What points of reference do you have for meaning of '/'?
