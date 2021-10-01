@@ -2,5 +2,7 @@ Flask : fast prototyping
 # Microframework that can be installed by a package framework
 # don't need to worry about a lot of stuff, just in python
 # streamline our life. 
+# templating possibilities
+## some inheritance possibilities
 Apache : can drop in a flask thing into apache to take advantage of its higher industrial-grade serving capabilities
 
