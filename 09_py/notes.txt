@@ -4,5 +4,7 @@ Flask : fast prototyping
 # streamline our life. 
 # templating possibilities
 ## some inheritance possibilities
+# promotes code reuse
+# simplifies DB access/backend framework
 Apache : can drop in a flask thing into apache to take advantage of its higher industrial-grade serving capabilities
 
