@@ -5,18 +5,28 @@ K09 -- Learning flask day 1
 
 Q0: Where have you seen similar syntax in other langs?
 This seems like the object of a certain class creation in java (initialization?).
+EDIT: It seems it indeed assigned the variable to a new Flask class object.
 Q1: What points of reference do you have for meaning of '/'?
 This is the header for path files, so its likely specifying that the root file for the website is here (and relative)
+EDIT: This seems to be correct.
 Q2: Where will this print to?
 print() prints to console.
+EDIT: This also seems to be correct.
 Q3: What will it print?
 It will print the '__name__' variable
+EDIT:
+That turned out to be "
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+"
+At the very least it seems like the name of the file?
 Q3: Will this appear anywhere? How u know?
 No it will not appear anywhere, because we never called it again. If it did, it would be in the console, because that's what print() does.
 EDIT:
 It does, print() prints in the console and return returns the text to the browser. @app.route("/") seems to suggest say "if they try to access website.com/, serve them with this function"
 Q4: Where have you seen similar construcs in other languages?
 This again seems very javaonic and reminiscent of the time I used JavaFX.
+EDIT: This is getting closer and closer to that time I used javaFX, although JavaFX was effectively just a browser...
 
 Notes:
 Running the program results in this printout:
