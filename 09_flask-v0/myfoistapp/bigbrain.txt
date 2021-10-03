@@ -1,4 +1,4 @@
-ER - Edwin Z. Renggeng Z.
+ER - Edwin Z. Renggeng Z. Duckies: RZ-Inkwell EZ-N/A
 SoftDev
 K09 -- Learning flask day 1
 2021-10-01
