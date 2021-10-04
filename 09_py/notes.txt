@@ -14,3 +14,7 @@ Flask : fast prototyping
 ## Jinja2 - templates
 Apache : can drop in a flask thing into apache to take advantage of its higher industrial-grade serving capabilities
 
+Workflow:
+* activate venv
+* do Flask dev
+* deactivate venv
