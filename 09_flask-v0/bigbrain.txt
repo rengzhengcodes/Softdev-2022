@@ -1,0 +1,75 @@
+ER - Edwin Z. Renggeng Z. Duckies: RZ-Inkwell EZ-N/A
+SoftDev
+K09 -- Learning flask day 1
+2021-10-01
+
+Q0: Where have you seen similar syntax in other langs?
+This seems like the object of a certain class creation in java (initialization?).
+EDIT: It seems it indeed assigned the variable to a new Flask class object.
+Q1: What points of reference do you have for meaning of '/'?
+This is the header for path files, so its likely specifying that the root file for the website is here (and relative)
+EDIT: This seems to be correct.
+Q2: Where will this print to?
+print() prints to console.
+EDIT: This also seems to be correct.
+Q3: What will it print?
+It will print the '__name__' variable
+EDIT:
+That turned out to be "
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+"
+At the very least it seems like the name of the file?
+Q3: Will this appear anywhere? How u know?
+No it will not appear anywhere, because we never called it again. If it did, it would be in the console, because that's what print() does.
+EDIT:
+It does, print() prints in the console and return returns the text to the browser. @app.route("/") seems to suggest say "if they try to access website.com/, serve them with this function"
+Q4: Where have you seen similar construcs in other languages?
+This again seems very javaonic and reminiscent of the time I used JavaFX.
+EDIT: This is getting closer and closer to that time I used javaFX, although JavaFX was effectively just a browser...
+
+Notes:
+Running the program results in this printout:
+" * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)" in console.
+
+Attempted to connect to home IP at port 5000 (above IP) via https. Resulted in this printout:
+"127.0.0.1 - - [02/Oct/2021 23:11:23] code 400, message Bad request version ("ä*A\x9fÞ\x89åR±VO\x84ÕC_V\x17bãÍù\x92NèÔ'p\x81Jo\\°\x00$\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À")
+127.0.0.1 - - [02/Oct/2021 23:11:23] "üF^?«\m_¥ù5Qn÷ÁKê,¼SIÉ%íT ä*A	åR±VO
+                                                                             ÕC_VbãÍùNèÔ'pJo\°$À+À/Ì©Ì¨À,À0À" HTTPStatus.BAD_REQUEST -
+127.0.0.1 - - [02/Oct/2021 23:11:23] code 400, message Bad request version ('tKÜÚþ]ý\x94ëYsÃ\x92a\x14^Î!¾×\x00$\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+127.0.0.1 - - [02/Oct/2021 23:11:23] "ü
+Ù\aÝ$ ò(!-g×þ$_ Wn�PÏÏ³JpS
+                          a
+tKÜÚþ]ýëYsÃa^Î!¾×$À+À/Ì©Ì¨À,À0À" HTTPStatus.BAD_REQUEST -
+
+"
+Says this in browser (corresponding to above console printout):
+"Secure Connection Failed
+
+An error occurred during a connection to 127.0.0.1:5000. SSL received a record that exceeded the maximum permissible length.
+
+Error code: SSL_ERROR_RX_RECORD_TOO_LONG
+
+    The page you are trying to view cannot be shown because the authenticity of the received data could not be verified.
+    Please contact the website owners to inform them of this problem."
+
+Looking at the file, nothing seems to be declared except that the server exists, so the 400 error makes sense since the server cannot handle a request (as its basically nothing right now) and the browser therefore gets nothing in response. We did not set up our HTTPS protocols, so this error makes sense.
+
+Retrying with http:
+Prints following in console:
+"__main__
+127.0.0.1 - - [02/Oct/2021 23:14:27] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [02/Oct/2021 23:14:27] "GET /favicon.ico HTTP/1.1" 404 -
+
+
+"
+
+Says the following in browser:
+"No hablo queso!"
+
+It seems return in hello_world() results in the html printout. The problem is where is this being fed? Flask class object is being run, but what is it doing? Where is __name__ declared?
