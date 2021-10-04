@@ -1,6 +1,9 @@
-# Clyde 'Thluffy' Sinclair
+# EAR (Edwin Zheng Angela Zhang Renggeng Zheng)
 # SoftDev
-# Oct 2021
+# K10 - Flask Learning Day 2, the Flaskening
+# 2021-10-04
+
+# Same file as from yesterday. See notes from 09_flask-v0/bigbrain.txt
 
 from flask import Flask
 app = Flask(__name__) # Q0: Where have you seen similar syntax in other langs?
