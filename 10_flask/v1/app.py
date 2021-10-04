@@ -10,7 +10,8 @@ app = Flask(__name__) #create instance of class Flask
 # seems to tell the code that when a user accesses the website's root (website.com/, it runs the function)
 # EDIT: Confirmed
 def hello_world():
-	# Printouts seem the same despite removal of print(__name__) for all tested methods. EDIT: It's false we just didn't see it.
+	# Printouts seem the same despite removal of print(__name__) for all tested methods.
+	# EDIT: It's false we just didn't see it.
 	return "No hablo queso!"
 
 app.run()
