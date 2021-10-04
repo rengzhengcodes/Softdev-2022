@@ -1,6 +1,11 @@
-# EAR (Edwin Z. Angela Z. Renggeng Z.)
+# EAR (Edwin Zheng Angela Zhang Renggeng Zheng)
 # SoftDev
 # K10 - Flask Learning Day 2, the Flaskening
 # 2021-10-04
 
+Notes:
+V1:
 
+@app.route("/")
+ - seems to tell the code that when a user accesses the website's root (website.com/, it runs the function)
+ 
