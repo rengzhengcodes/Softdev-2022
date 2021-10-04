@@ -4,8 +4,17 @@
 # 2021-10-04
 
 Notes:
+
+V0:
+
+Same file as from yesterday. See notes from 09_flask-v0/bigbrain.txt
+
 V1:
 
 @app.route("/")
  - seems to tell the code that when a user accesses the website's root (website.com/, it runs the function)
- 
+ - Printouts seem the same despite removal of print(__name__) for all tested methods.
+
+V2:
+
+
