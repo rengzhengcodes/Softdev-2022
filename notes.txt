@@ -1,0 +1,6 @@
+# EAR (Edwin Z. Angela Z. Renggeng Z.)
+# SoftDev
+# K10 - Flask Learning Day 2, the Flaskening
+# 2021-10-04
+
+
