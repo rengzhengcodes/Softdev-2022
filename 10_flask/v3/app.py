@@ -27,3 +27,8 @@ app.debug = True
 	# * Debugger PIN: 125-144-047
 	#"
 app.run()
+
+# Besides that nothing changed. We do not know where to enter the debugger PIN.
+# EDIT: further versions showed no new knowledge.
+	# Console did not work. EDIT: nothing we found in browser dev tools did either
+# Runs the server when you import it from another file
