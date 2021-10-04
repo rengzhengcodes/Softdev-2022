@@ -5,7 +5,7 @@ app = Flask(__name__) #creates an instance of the Flask class
 @app.route("/")
 def main():
 	job = random_job()
-	jobs = str(job_percentages.keys())
+	jobs = str(tuple(job_percentages.keys()))
 	template =  """EAR (Edwin Zheng, Angela Zheng, Renggeng Zheng) <br/>
 	Random Occupation: {occupation} <br/>
 	Possible Occupations: {jobs}"""
