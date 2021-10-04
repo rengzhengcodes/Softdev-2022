@@ -1,6 +1,7 @@
-# Clyde 'Thluffy' Sinclair
+# EAR (Edwin Zheng Angela Zhang Renggeng Zheng)
 # SoftDev
-# Oct 2021
+# K10 - Flask Learning Day 2, the Flaskening
+# 2021-10-04
 
 from flask import Flask
 app = Flask(__name__) #create instance of class Flask
@@ -12,4 +13,3 @@ def hello_world():
     return "No hablo queso!"
 
 app.run()
-
