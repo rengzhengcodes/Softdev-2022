@@ -9,3 +9,5 @@ def main():
 	"""EAR (Edwin Zheng, Angela Zheng, Renggeng Zheng) \n
 	Random Occupation: {occupation} \n
 	Possible Occupations: {jobs}""".format(occupation = job, jobs = jobs) #template string that then gets formatted via kwargs
+
+app.run()
