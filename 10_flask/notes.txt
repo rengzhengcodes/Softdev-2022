@@ -42,9 +42,11 @@ V3:
 	  
  - Besides that nothing changed. We do not know where to enter the debugger PIN.
 	 - Console did not work. 
-
+ - Runs the server when you import it from another file
+ 
 V4:
 
  - Nothing has changed output-wise from V3.
  - For V4 it now seems that it only runs app if the python file is the main one called.
  - Debugger stuff still not figured out.
+ - It runs nothing if you just import the file from another file.
