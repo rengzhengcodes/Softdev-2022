@@ -6,8 +6,8 @@ app = Flask(__name__) #creates an instance of the Flask class
 def main():
 	job = random_job()
 	jobs = str(job_percentages.keys())
-	template =  """EAR (Edwin Zheng, Angela Zheng, Renggeng Zheng) \n
-	Random Occupation: {occupation} \n
+	template =  """EAR (Edwin Zheng, Angela Zheng, Renggeng Zheng) <br/>
+	Random Occupation: {occupation} <br/>
 	Possible Occupations: {jobs}"""
 	template = template.format(occupation = job, jobs = jobs) #template string that then gets formatted via kwargs
 	return template
