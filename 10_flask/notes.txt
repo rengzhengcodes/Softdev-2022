@@ -12,22 +12,22 @@ Same file as from yesterday. See notes from 09_flask-v0/bigbrain.txt
 V1:
 
 @app.route("/")
- - seems to tell the code that when a user accesses the website's root (website.com/, it runs the function)
+ - seems to tell the code that when a user accesses the website's root (website.com/, it runs the function) EDIT: Confirmed
  - Printouts seem the same despite removal of print(__name__) for all tested methods. EDIT: It's false we just didn't see it.
 
 V2:
 
-- difference was the print statements of print(__name__) and a print statement saying that we're about to print that was added.
-- when the root page was accessed, the console printed 
-"
-about to print __name__...
-__main__
-127.0.0.1 - - [04/Oct/2021 08:20:19] "GET / HTTP/1.1" 200 -
-"
+- difference was the print statements of print(__name__) and a print statement saying that we're about to print that was added. EDIT: printed the messages in terminal
+	- when the root page was accessed, the console printed 
+	"
+	about to print __name__...
+	__main__
+	127.0.0.1 - - [04/Oct/2021 08:20:19] "GET / HTTP/1.1" 200 -
+	"
 
 V3:
 
- - app.debug = True means w eturned on website debug mode.
+ - app.debug = True means we turned on website debug mode. EDIT: it said it did, but what did it do?
 	 - Starting printout changed to:
 	 " * Serving Flask app 'app' (lazy loading)
 	  * Environment: production
@@ -40,13 +40,13 @@ V3:
 	  * Debugger PIN: 125-144-047
 	 "
 	  
- - Besides that nothing changed. We do not know where to enter the debugger PIN.
-	 - Console did not work. 
+ - Besides that nothing changed. We do not know where to enter the debugger PIN. EDIT: further versions showed no new knowledge.
+	 - Console did not work. EDIT: nothing we found in browser dev tools did either
  - Runs the server when you import it from another file
  
 V4:
 
  - Nothing has changed output-wise from V3.
- - For V4 it now seems that it only runs app if the python file is the main one called.
- - Debugger stuff still not figured out.
- - It runs nothing if you just import the file from another file.
+ - For V4 it now seems that it only runs app if the python file is the main one called. EDIT: true
+ - Debugger stuff still not figured out. EDIT: currently still true
+ - It runs nothing if you just import the file from another file. Edit: true
