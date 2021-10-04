@@ -13,8 +13,16 @@ V1:
 
 @app.route("/")
  - seems to tell the code that when a user accesses the website's root (website.com/, it runs the function)
- - Printouts seem the same despite removal of print(__name__) for all tested methods.
+ - Printouts seem the same despite removal of print(__name__) for all tested methods. EDIT: It's false we just didn't see it.
 
 V2:
+
+- difference was the print statements of print(__name__) and a print statement saying that we're about to print that was added.
+- when the root page was accessed, the console printed 
+"
+about to print __name__...
+__main__
+127.0.0.1 - - [04/Oct/2021 08:20:19] "GET / HTTP/1.1" 200 -
+"
 
 
