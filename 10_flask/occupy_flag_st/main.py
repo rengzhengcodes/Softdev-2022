@@ -37,6 +37,7 @@ def debug_print(var):
 		print(str(var))
 
 import csv #imports built in csv library
+import random #imports the random library
 occupations = csv.DictReader(open("occupations.csv", "r")) #imports csv as a dict via rows
 job_percentages = dict() #stores jobs mapping to their percentages of workforce
 #formatting it to a more iterable format
@@ -48,7 +49,6 @@ for row in occupations:
 
 #generates a random job given a probability dict formatted {job: percentage with total at the bottom}
 def random_job(probability_book = job_percentages): #default argument provided. Valid for an assignment use case.
-	import random
 	if DEBUG:
 		random.seed(a=42) #sets seed for predictable testing
 
