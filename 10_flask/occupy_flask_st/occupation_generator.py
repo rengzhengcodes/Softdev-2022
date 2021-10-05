@@ -57,4 +57,4 @@ def random_job(probability_book = job_percentages): #default argument provided. 
 	jobs = list(probability_book.keys())
 	percentages = list(probability_book.values())
 
-	return random.choices(population=jobs, k=1, weights=percentages)
+	return random.choices(population=jobs, k=1, weights=percentages)[0]
