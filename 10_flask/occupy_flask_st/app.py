@@ -5,7 +5,9 @@ app = Flask(__name__) #creates an instance of the Flask class
 @app.route("/")
 def main():
 	job = random_job()
-	jobs = str(tuple(job_percentages.keys()))
+	jobs = list(job_percentages.keys())[0:-1] #list of jobs, removing the total key
+	jobs.sort() # sorts jobs in alphabetical order
+	jobs = str(jobs)[1:-1] #removes brackets
 	template =  """EAR (Edwin Zheng, Angela Zheng, Renggeng Zheng) <br/>
 	Random Occupation: {occupation} <br/>
 	Possible Occupations: {jobs}"""
