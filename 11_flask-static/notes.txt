@@ -1,0 +1,22 @@
+EAR (Edwin Zheng, Angela Zhang, Renggeng Zheng)
+SoftDev
+K11 -- Flask Day 3: static pages
+2021-10-06
+
+# app.py does not seem to be much different in structure, and only minimally in execution (the printout is only a bit different) from V4 from K10
+
+foo: What happens when you access this file
+	 via
+	 http://localhost:5000/static/foo
+	 ?
+
+prediction: it asks you to download the file, and then it does,
+result: It asks you to save the foo file, and then opens it with its full contents (if firefox gives you the option to, it sometimes does not).
+
+What happens when you access this file via
+		 http://localhost:5000/static/foo.html?
+
+prediction: it serves up the HTML file as a regular html file.
+result: it serves the HTML as if you just opened an HTML file with firefox.
+
+Note: file is specified in relation to the app.py's directory.
