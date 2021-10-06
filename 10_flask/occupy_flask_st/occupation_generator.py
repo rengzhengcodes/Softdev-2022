@@ -45,16 +45,25 @@ for row in occupations:
 	row_values = tuple(row.values()) #gets rid of the unecessary keys information
 	job_percentages[row_values[0]] = float(row_values[1]) #maps jobs to their percentages of workforce in dict
 
-# debug_print(job_percentages)
+# print(job_percentages)
 
 #generates a random job given a probability dict formatted {job: percentage with total at the bottom}
 def random_job(probability_book = job_percentages): #default argument provided. Valid for an assignment use case.
-	# removes total from dictionary
-	try: #deletes total line if it exists
-		del probability_book["Total"]
-	except KeyError:
-		pass
+	# gets jobs and their percentages and places them in lists
 	jobs = list(probability_book.keys())
 	percentages = list(probability_book.values())
+	other = 0 # var to determine other percentage
+	# removes total from dictionary
+	try: #deletes total line if it exists
+		if probability_book["Total"] != 100: #if the total does not add up to 100, the other weight is calculated
+			other = 100 - probability_book["Total"]
+		total_index = jobs.index("Total")
+		del jobs[total_index], percentages[total_index]
+	except KeyError:
+		pass
+
+	if other != 0 and "Other" not in jobs: #if the other category exists with a nonzero weight add it, if its not specified
+		jobs.append("Other")
+		percentages.append(other)
 
 	return random.choices(population=jobs, k=1, weights=percentages)[0]

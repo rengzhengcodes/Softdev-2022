@@ -2,7 +2,7 @@
 import occupation_generator as main
 
 results = dict()
-results["Total"] = 10000000
+results["Total"] = 1000000
 for run in range(results["Total"]):
 	output = main.random_job()
 	if output in results.keys():
@@ -21,4 +21,4 @@ for job in sorted_jobs:
 	else:
 		print(job + " : " + str(round(results[job] / results["Total"] * 100, 2)) + " : " + "0.2")
 
-print("Total" + " : " + str(results["Total"] / results["Total"] * 100) + " : " + str(main.job_percentages["Total"]))
+print("Total" + " : " + str(results["Total"] / results["Total"] * 100) + " : 100")
