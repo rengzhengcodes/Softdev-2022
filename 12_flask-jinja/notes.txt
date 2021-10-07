@@ -1,3 +1,18 @@
 @ before a function = decorator
  - used to serve routes
  - good tihng about flask microframework, boxes up some of the tedious stuff
+pressing period in a github window opens vscode
+
+#Q0: What happens if you remove render_template from this line?
+Prediction: the places that call the render_template function will break.
+Reality:
+
+#Q1: Can all of your teammates confidently predict the URL to use to load this page?
+Prediction: http://localhost:5000/my_foist_template
+Reality:
+
+#Q2: What is the significance of each argument?
+Prediction:
+0th Argument: specifies file to use as template
+1st Argument: replaces the foo kwarg with "fooooo"
+2nd Argument: It loads coll as a vertical list of items, following the for loop kwarg in the body.
