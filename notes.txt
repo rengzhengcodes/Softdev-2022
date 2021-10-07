@@ -1,0 +1,3 @@
+@ before a function = decorator
+ - used to serve routes
+ - good tihng about flask microframework, boxes up some of the tedious stuff
