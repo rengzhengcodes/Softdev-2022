@@ -1,3 +1,8 @@
+EAR (Edwin Zheng, Angela Zhang, Renggeng Zheng)
+SoftDev
+K11 -- Flask Day 4: jinja templates
+2021-10-07
+
 @ before a function = decorator
  - used to serve routes
  - good tihng about flask microframework, boxes up some of the tedious stuff
