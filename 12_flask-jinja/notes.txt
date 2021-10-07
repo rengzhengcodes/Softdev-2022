@@ -5,14 +5,18 @@ pressing period in a github window opens vscode
 
 #Q0: What happens if you remove render_template from this line?
 Prediction: the places that call the render_template function will break.
-Reality:
+Reality: Correct! The server also serves up a NameError html page for it, saying where the error is. This is from the debugger.
 
 #Q1: Can all of your teammates confidently predict the URL to use to load this page?
 Prediction: http://localhost:5000/my_foist_template
-Reality:
+Reality: Correct!
 
 #Q2: What is the significance of each argument?
 Prediction:
 0th Argument: specifies file to use as template
 1st Argument: replaces the foo kwarg with "fooooo"
 2nd Argument: It loads coll as a vertical list of items, following the for loop kwarg in the body.
+Reality:
+0th: correct!
+1st: correct! (we know because the title is the string, as is expected according to the html)
+2nd: correct!
