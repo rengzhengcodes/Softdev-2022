@@ -39,7 +39,7 @@ def choose_from_dict(occupations: dict) -> str:
 	occupations dictionary."""
 
 	job_classes = list(occupations.keys())
-	percentages = list(value["percentage"] for value in occupations.values())
+	percentages = list(value["percentage"] for value in occupations.values()) #we extract only the percent data
 
 	choice = random.choices(job_classes, weights=percentages)[0]
 	return choice
