@@ -23,7 +23,8 @@ def read_occupations(filename: str) -> dict:
         for row in reader:
             job_class = row[0]
             percentage = row[1]
-            occupations[job_class] = float(percentage)
+			link = row[2]
+            occupations[job_class] = {"percentage" = float(percentage), "link" = link}
 
     # We mark everything not in the occupations list as "Other".
     total_percentage = occupations["Total"]
