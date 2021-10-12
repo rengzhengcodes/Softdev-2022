@@ -13,14 +13,14 @@ app = Flask(__name__)
 @app.route("/occupyflaskst")
 def occupyflaskst():
 	"""Reads in data and puts it into an html template"""
-    jobs = occupations.read_occupations("data/occupations.csv")
-    random_occupation = occupations.choose_from_dict(jobs)
+	jobs = occupations.read_occupations("data/occupations.csv")
+	random_occupation = occupations.choose_from_dict(jobs)
 
-    return render_template(
-        "tablified.html", jobs=jobs, random_occupation=random_occupation
-    )
+	return render_template(
+		"tablified.html", jobs=jobs, random_occupation=random_occupation
+	)
 
 
 if __name__ == "__main__":
-    app.debug = True
-    app.run()
+	app.debug = True
+	app.run()
