@@ -1,4 +1,4 @@
-#Renggeng Zheng
+#name02 - Renggeng Zheng, Julia Nelson, Ivan Lam
 #SoftDev
-#K<nn> -- <Title/Topic/Summary>
-#<yyyy>-<mm>-<dd>
+#K14 -- Flask Day 04 (probably) Forms!
+#2021-10-14
