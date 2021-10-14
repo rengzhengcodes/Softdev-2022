@@ -23,7 +23,8 @@ PROTIP: Insert your own in-line comments wherever they will help your future sel
 '''
 
 @app.route("/") #, methods=['GET', 'POST']) #default variables
-#disabling GET means you can't request this function. Disabling POST you CAN request the function BUT it's not allowed to return anything (or does not know how).
+#disabling GET means you can't request this function.
+#Disabling POST you CAN request the function BUT it's not allowed to return anything (or does not know how).
 def disp_loginpage():
     print("\n\n\n")
     print("***DIAG: this Flask obj ***")
