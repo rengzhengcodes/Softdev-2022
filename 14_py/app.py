@@ -1,6 +1,8 @@
-# Clyde 'Thluffy' Sinclair
-# SoftDev
-# Oct 2021
+#name02 - Renggeng Zheng, Julia Nelson, Ivan Lam (Ducky: Inkwell, Dahlia, Charizard)
+#SoftDev
+#K14 -- Flask Day 04 (probably) Forms!
+#2021-10-14
+
 
 from flask import Flask             #facilitate flask webserving
 from flask import render_template   #facilitate jinja templating
