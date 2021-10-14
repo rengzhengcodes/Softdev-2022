@@ -1,4 +1,4 @@
-#name02 - Renggeng Zheng, Julia Nelson, Ivan Lam (Ducky: Inkwell, Dog, Stolen Stuffed Animal)
+#name02 - Renggeng Zheng, Julia Nelson, Ivan Lam (Ducky: Inkwell, Dahlia, Charizard)
 #SoftDev
 #K14 -- Flask Day 04 (probably) Forms!
 #2021-10-14
