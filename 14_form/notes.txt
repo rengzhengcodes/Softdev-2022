@@ -2,3 +2,21 @@
 #SoftDev
 #K14 -- Flask Day 04 (probably) Forms!
 #2021-10-14
+
+HTML:
+* <form action="/auth">
+	* when form is submitted it invokes the /auth route
+
+Python:
+* @app.route("/", methods = ["GET", "POST"])
+	* on by default
+	* "GET" means ability to access the function
+	* "POST" means ability to respond as the function
+* app
+	* prints the server stats
+* request
+	* thing telling the server "hey, do this for me"
+	*  request.args
+		* the arguments of the request as a dictionary. Usually are form responses
+	* request.headers
+		* A request's shipping label/letter header. A request is basically a big box of mail, the header is the thing the post service uses to deliver the mail and identify the sender.
