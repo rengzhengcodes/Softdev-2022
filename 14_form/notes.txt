@@ -3,6 +3,10 @@
 #K14 -- Flask Day 04 (probably) Forms!
 #2021-10-14
 
+The website will store a cache of relevant information - this will impact whether having Flask methods such as 'GET' or 'POST' will cause a website malfunction because said information may already be stored for convencience. Thus, make sure to clear you cache to determine the impact that those functions have.
+
+Software development seems to use a lot of mail metaphors (i.e. 'GET' and 'POST').
+
 HTML:
 * <form action="/auth">
 	* when form is submitted it invokes the /auth route
