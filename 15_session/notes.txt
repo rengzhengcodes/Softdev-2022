@@ -1,0 +1,4 @@
+request.args = what's in the url
+-- if you get
+request.form = what's in the form
+-- if you post

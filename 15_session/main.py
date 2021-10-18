@@ -17,7 +17,7 @@ def main():
 @server.route('/auth')
 def authenticate():
 	'''autenticates login info'''
-	if request.form["u_name"] == "admin" and request.form["p_word"] == "admin":
+	if request.args["u_name"] == "admin" and request.args["p_word"] == "admin":
 		return render_template("response.html", header=header)
 
 if __name__ == "__main__": #false if this file imported as module
