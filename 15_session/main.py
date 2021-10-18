@@ -14,10 +14,10 @@ def main():
 	'''displays login page'''
 	return render_template("login.html", header=header)
 
-@server.route('/auth')
+@server.route('/auth', methods=["POST", "GET"])
 def authenticate():
 	'''autenticates login info'''
-	if request.args["u_name"] == "admin" and request.args["p_word"] == "admin":
+	if request.form["u_name"] == "admin" and request.form["p_word"] == "admin":
 		return render_template("response.html", header=header)
 	else:
 		return render_template("login.html", header=header, login_status="Username or PW is incorrect.")
