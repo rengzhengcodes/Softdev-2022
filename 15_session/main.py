@@ -17,7 +17,6 @@ def main():
 @server.route('/auth')
 def authenticate():
 	'''autenticates login info'''
-	print(request.form)
 	if request.form.get("u_name") == "admin" and request.form.get("p_word") == "admin":
 		return render_template("response.html", header=header)
 	else:
