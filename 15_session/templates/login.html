@@ -7,10 +7,12 @@
 	<body>
 		<h1>{{ header }}</h1>
 
-		<form class="/auth" method="post">
+		<form action="/auth">
 			<input type="text" name="u_name">
 			<input type="text" name="p_word">
 			<input type="submit" name="submit">
 		</form>
+
+		<p>{{ login_status }}</p>
 	</body>
 </html>

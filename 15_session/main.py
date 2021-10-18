@@ -17,8 +17,11 @@ def main():
 @server.route('/auth')
 def authenticate():
 	'''autenticates login info'''
-	if request.args["u_name"] == "admin" and request.args["p_word"] == "admin":
+	print(request.form)
+	if request.form.get("u_name") == "admin" and request.form.get("p_word") == "admin":
 		return render_template("response.html", header=header)
+	else:
+		return render_template("login.html", header=header, login_status="Username or PW is incorrect.")
 
 if __name__ == "__main__": #false if this file imported as module
 	#enable debugging, auto-restarting of server when this file is modified
