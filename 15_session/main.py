@@ -6,10 +6,7 @@
 from flask import Flask, request, render_template
 
 server = Flask(__name__)
-header = """#Team02 - Renggeng Zheng Ivan Lam Lia Nelson <br/>
-#SoftDev <br/>
-#K15 -- Session Greetings -- Usernames and Passwords <br/>
-#2021-10-18"""
+header = """#Team02 - Renggeng Zheng Ivan Lam Lia Nelson"""
 
 
 @server.route('/', methods=["POST", "GET"])
