@@ -17,7 +17,7 @@ def main():
 @server.route('/auth')
 def authenticate():
 	'''autenticates login info'''
-	if request.form.get("u_name") == "admin" and request.form.get("p_word") == "admin":
+	if request.args["u_name"] == "admin" and request.args["p_word"] == "admin":
 		return render_template("response.html", header=header)
 	else:
 		return render_template("login.html", header=header, login_status="Username or PW is incorrect.")
