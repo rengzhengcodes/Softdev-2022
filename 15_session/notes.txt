@@ -10,3 +10,4 @@ request.form = what's in the form
 The above are functionally the same sans get puts your entries in the URL.
 
 Empty templates don't render.
+How to create session object?
