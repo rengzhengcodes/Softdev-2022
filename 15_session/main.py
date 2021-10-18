@@ -18,13 +18,13 @@ def main():
 def authenticate():
 	'''autenticates login info'''
 	try:
-		if request.method != "POST":
+		if request.method != "POST": #makes sure data is not sent in the url
 			return render_template("login.html", header=header,login_status="Wrong method used to access login. Must use POST")
 		if request.form["u_name"] == "admin" and request.form["p_word"] == "admin":
 			return render_template("response.html", header=header, username = request.form["u_name"]) # user greeting + our header
 		else:
 			return render_template("login.html", header=header, login_status="Username or PW is incorrect.") #returns the index page if the login isn't correct + tells the user the input wasn't right
-	except:
+	except: #catches uncaught errors
 		return render_template("login.html", header=header, login_status="Unknown error occured")
 if __name__ == "__main__": #false if this file imported as module
 	#enable debugging, auto-restarting of server when this file is modified
