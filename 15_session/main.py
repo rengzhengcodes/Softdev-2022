@@ -16,7 +16,7 @@ def main():
 def authenticate():
 	'''autenticates login info'''
 	if request.form["u_name"] == "admin" and request.form["p_word"] == "admin":
-		
+		return render_template("admin.html")
 
 if __name__ == "__main__": #false if this file imported as module
 	#enable debugging, auto-restarting of server when this file is modified
