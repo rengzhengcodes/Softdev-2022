@@ -10,12 +10,12 @@ header = """#Team02 - Renggeng Zheng Ivan Lam Lia Nelson"""
 
 
 @server.route('/', methods=["GET"])
-def main():
+def main() -> template:
 	'''displays login page'''
 	return render_template("login.html", header=header) # renders our login with our header
 
 @server.route('/auth', methods=["POST", "GET"])
-def authenticate():
+def authenticate() -> template:
 	'''autenticates login info'''
 	try:
 		if request.method != "POST": #makes sure data is not sent in the url
@@ -26,6 +26,14 @@ def authenticate():
 			return render_template("login.html", header=header, login_status="Username or PW is incorrect.") #returns the index page if the login isn't correct + tells the user the input wasn't right
 	except: #catches uncaught errors
 		return render_template("login.html", header=header, login_status="Unknown error occured")
+
+def set_login_cookie(template: template) -> response: #pass in a template to get cookies
+	if request.method == "POST": #check in case we call this elsewhere
+		response = make_response(template)
+		resp.set_cookie("u_name", request.form["u_name"]) # saves form in cookie
+	else:
+		return template
+
 if __name__ == "__main__": #false if this file imported as module
 	#enable debugging, auto-restarting of server when this file is modified
 	server.debug = True
