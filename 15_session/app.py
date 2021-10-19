@@ -30,9 +30,15 @@ def authenticate() -> template:
 def set_login_cookie(template: template) -> response: #pass in a template to get cookies
 	if request.method == "POST": #check in case we call this elsewhere
 		response = make_response(template)
-		resp.set_cookie("u_name", request.form["u_name"]) # saves form in cookie
+		response.set_cookie("u_name", request.form["u_name"]) # saves form in cookie
+
+		return response
 	else:
 		return template
+
+def get_login_cookie() -> str:
+	name = request.cookies.get('u_name')
+	return name
 
 if __name__ == "__main__": #false if this file imported as module
 	#enable debugging, auto-restarting of server when this file is modified
