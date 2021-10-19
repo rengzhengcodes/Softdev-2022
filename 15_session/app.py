@@ -3,7 +3,7 @@
 #K15 -- Session Greetings -- Usernames and Passwords
 #2021-10-18
 
-from flask import Flask, request, render_template
+from flask import Flask, render_template, request, session
 
 server = Flask(__name__)
 header = """#Team02 - Renggeng Zheng Ivan Lam Lia Nelson"""
@@ -21,20 +21,16 @@ def authenticate() -> template:
 		if request.method != "POST": #makes sure data is not sent in the url
 			return render_template("login.html", header=header,login_status="Wrong method used to access login. Must use POST")
 		if request.form["u_name"] == "admin" and request.form["p_word"] == "admin": #pretty sure we should hash the password but this is a proof of concept for the login.
+			set_login_cookie()
 			return render_template("response.html", header=header, username = request.form["u_name"]) # user greeting + our header
 		else:
 			return render_template("login.html", header=header, login_status="Username or PW is incorrect.") #returns the index page if the login isn't correct + tells the user the input wasn't right
 	except: #catches uncaught errors
 		return render_template("login.html", header=header, login_status="Unknown error occured")
 
-def set_login_cookie(template: template) -> response: #pass in a template to get cookies
+def set_login_cookie(): #pass in a template to get cookies
 	if request.method == "POST": #check in case we call this elsewhere
-		response = make_response(template)
-		response.set_cookie("u_name", request.form["u_name"]) # saves form in cookie
-
-		return response
-	else:
-		return template
+		session["u_name"] = request.form["u_name"] #login cookie set
 
 def get_login_cookie() -> str:
 	name = request.cookies.get('u_name')
