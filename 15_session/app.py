@@ -20,7 +20,7 @@ def authenticate():
 	try:
 		if request.method != "POST": #makes sure data is not sent in the url
 			return render_template("login.html", header=header,login_status="Wrong method used to access login. Must use POST")
-		if request.form["u_name"] == "admin" and request.form["p_word"] == "admin":
+		if request.form["u_name"] == "admin" and request.form["p_word"] == "admin": #pretty sure we should hash the password but this is a proof of concept for the login.
 			return render_template("response.html", header=header, username = request.form["u_name"]) # user greeting + our header
 		else:
 			return render_template("login.html", header=header, login_status="Username or PW is incorrect.") #returns the index page if the login isn't correct + tells the user the input wasn't right
