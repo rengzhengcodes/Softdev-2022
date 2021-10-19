@@ -46,9 +46,11 @@ def set_login_cookie(): #pass in a template to get cookies
 	if request.method == "POST": #check in case we call this elsewhere
 		session["u_name"] = request.form["u_name"] #login cookie set
 
+@server.route('/logout', methods=["POST"])
 def logout():
 	if request.method == "POST":
 		session.pop("u_name")
+	return render_template("login.html", header=header)
 
 if __name__ == "__main__": #false if this file imported as module
 	#enable debugging, auto-restarting of server when this file is modified
