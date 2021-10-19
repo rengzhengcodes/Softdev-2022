@@ -4,18 +4,22 @@
 #2021-10-18
 
 from flask import Flask, render_template, request, session
+import os
 
 server = Flask(__name__)
+server.secret_key = os.urandom(32)
 header = """#Team02 - Renggeng Zheng Ivan Lam Lia Nelson"""
 
 
 @server.route('/', methods=["GET"])
-def main() -> template:
+def main():
 	'''displays login page'''
-	return render_template("login.html", header=header) # renders our login with our header
-
+	if 'u_name' not in session: # not logged in
+		return render_template("login.html", header=header) # renders our login with our header
+	else:
+		return render_template('response.html', header=header, username = session["u_name"])
 @server.route('/auth', methods=["POST", "GET"])
-def authenticate() -> template:
+def authenticate():
 	'''autenticates login info'''
 	try:
 		if request.method != "POST": #makes sure data is not sent in the url
