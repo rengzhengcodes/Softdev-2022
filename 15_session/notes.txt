@@ -17,3 +17,6 @@ app.secret_key = <randomly generate on ALPHANUMERIC STRING>
  * e.g. os.random(32)
  ** never store key in public repo, because it's the cryptographic key and if you do bye bye passwords
  ** session.pop(KEY) <- rm session data
+
+Question:
+How to redirect queries to the same url for different calls?
