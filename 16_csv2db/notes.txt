@@ -1,0 +1,24 @@
+cursor = indicator to where you are in DB
+Like cursor ina  text editor (changes happen here)
+
+SQLite - reliable, lightweight, free and open source
+
+Database vs Data Work
+Database != any collection of data
+CSV != database
+We are importing from a CSV file into a database
+Database in Cs = 
+
+2 Categories of Databases:
+Relational Databases - still used, very useful (like SQL)
+Nonrelational Databases - more suited to internet centric tasks (e.g. Mongo DB)
+
+Oracle - provides corporate database solutions - always on service
+SQLite - good because you don't need to spin up a server + hookins to interact with database <- extra moving parts we don't want right now.
+	- all data stored in 1 file, quick read write operations, can just be started from the command line
+	- don't need to spin up from server
+	- everything can be done via command line operations or via python
+		- will work nice with flask
+		- completes the stack, database powering site
+	
+
