@@ -20,3 +20,9 @@ app.secret_key = <randomly generate on ALPHANUMERIC STRING>
 
 Question:
 How to redirect queries to the same url for different calls?
+
+Notes:
+Can add empty username/pw checks
+redirect to main route if not logged in
+if method == "get":
+	return redirect(url_for(methodname))#redirects to that method
