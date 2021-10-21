@@ -28,7 +28,7 @@ def create_table(name: str, fields: dict) -> None:
 			cmd += ");"
 	c.execute(cmd)
 
-create_table("roster", {"name":"TEXT NOT NULL", "id":"INTEGER PRIMARY KEY", "age":"INTEGER NOT NULL"})
+create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 
 with open("students.csv", "r") as file: #opens csv file as variable file
 	dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
