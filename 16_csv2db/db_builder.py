@@ -30,15 +30,43 @@ def create_table(name: str, fields: dict) -> None:
 
 create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 
-with open("students.csv", "r") as file: #opens csv file as variable file
-	dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
-	for entry in dr: #for every entry in the DictReader
-		c.execute(f"INSERT INTO roster (name, age, id) VALUES (\"{entry['name']}\", {entry['age']}, {entry['id']})") #insert the values in order of name, age, id into the database.
+def fill_table(table: str, filename: str, headers: dict = None) -> None:
+	'''table = table you want to fill
+	filename = csv you're importing
+	headers = dict matching csv header names to field header names'''
 
+	with open(filename, "r") as file: #opens csv file as variable file
+		dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
+		csv_headers = None;
+		sql_fields = None
 
-command = ""          # test SQL stmt in sqlite3 shell, save as string
-c.execute(command)    # run SQL statement
+		if headers == None:
+			csv_headers = tuple(tuple(dr)[0].keys())# gets header by checking the keys of the firt element of the DictReader.
+			sql_fields = "(" #generates the sql_fields we'll feed to the command
+			for i in range(len(csv_headers)):
+				sql_fields += csv_headers[i]
+				if i != (len(csv_headers) - 1): # if its not the last element, add a comma
+					sql_fields += ", "
+				else:
+					sql_fields += ")"
 
+		for entry in dr: #for every entry in the DictReader
+			values = "("
+			for i in range(len(csv_headers)):
+				header = csv_headers[i] #gets the header at index
+				if type(entry[header]) is str: # if the entry is a string add quotes so its not confused with a field
+					values += f"\"{entry[header]}\""
+				else:
+					values += entry[header]
+
+				if i != (len(csv_headers) - 1): #if its not the last element, ad a comma
+					values += ", "
+				else:
+					values += ")"
+
+			c.execute(f"INSERT INTO roster {sql_fields} VALUES ({values})") #insert the values in order of name, age, id into the database.
+
+fill_table("roster", "students.csv")
 #==========================================================
 
 db.commit() #save changes
