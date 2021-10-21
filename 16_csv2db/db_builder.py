@@ -72,7 +72,7 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 				else:
 					values += ")"
 
-			c.execute(f"INSERT INTO roster {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
+			c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
 
 #creates roster of students
 create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
