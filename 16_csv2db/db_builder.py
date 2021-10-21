@@ -28,7 +28,7 @@ def create_table(name: str, fields: dict) -> None:
 			cmd += ");"
 	c.execute(cmd)
 
-create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
+create_table("roster", {"uname":"TEXT NOT NULL", "uage":"INTEGER NOT NULL", "uid":"INTEGER PRIMARY KEY"})
 
 def fill_table(table: str, filename: str, headers: dict = None) -> None:
 	'''table = table you want to fill
@@ -50,6 +50,15 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 					sql_fields += ", "
 				else:
 					sql_fields += ")"
+		else:
+			csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
+			sql_fields = "(" #generates the sql_fields we'll feed to the command
+			for i in range(len(csv_headers)):
+				sql_fields += headers[csv_headers[i]]
+				if i != (len(csv_headers) - 1): # if its not the last element, add a comma
+					sql_fields += ", "
+				else:
+					sql_fields += ")"
 
 		for entry in dr: #for every entry in the DictReader
 			values = "("
@@ -67,7 +76,7 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 
 			c.execute(f"INSERT INTO roster {sql_fields} VALUES {values}") #insert the values in order of name, age, id into the database.
 
-fill_table("roster", "students.csv")
+fill_table("roster", "students.csv", {"name":"uname","age":"uage","id":"uid"})
 #==========================================================
 
 db.commit() #save changes
