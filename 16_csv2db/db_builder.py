@@ -15,7 +15,11 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 #==========================================================
 
 
-# < < < INSERT YOUR TEAM'S POPULATE-THE-DB CODE HERE > > >
+c.execute("CREATE TABLE roster(name TEXT PRIMARY KEY, id INTEGER PRIAMRY KEY, age INTEGER PRIMARY KEY)")
+
+with open("students.csv", "r") as file: #opens csv file as variable file
+	dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
+
 
 
 command = ""          # test SQL stmt in sqlite3 shell, save as string
