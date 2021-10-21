@@ -14,12 +14,21 @@ c = db.cursor()               #facilitate db ops -- you will use cursor to trigg
 
 #==========================================================
 
+def create_table(name: str, fields: dict) -> None:
+	'''creates a table with the given name and fields
+	fields is a dict mapping a field name to its attributes'''
+	fields = tuple(fields.items()) #converts fields to a tuple for easy access
 
-c.execute("CREATE TABLE roster(name TEXT NOT NULL, id INTEGER PRIMARY KEY, age INTEGER NOT NULL)")
-'''everyone has a name, but names can be the same so they cannot be primary keys.
-everyone has an age, but those can also be the same so they cannot be primary keys.
-everyone has an id, those are unique so they should be primary keys.'''
+	cmd = f"CREATE TABLE {name}("#starter command for row creation
+	for i in range(len(fields)): #iterate through fields by index
+		cmd += f"{fields[i][0]} {fields[i][1]}"
+		if i != (len(fields) - 1): #if this is not the last element in the list, add a comma
+			cmd += ", "
+		else: #if not, cap it off
+			cmd += ");"
+	c.execute(cmd)
 
+create_table("roster", {"name":"TEXT NOT NULL", "id":"INTEGER PRIMARY KEY", "age":"INTEGER NOT NULL"})
 
 with open("students.csv", "r") as file: #opens csv file as variable file
 	dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
