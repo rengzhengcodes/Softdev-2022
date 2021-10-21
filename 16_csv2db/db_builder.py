@@ -37,11 +37,12 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 
 	with open(filename, "r") as file: #opens csv file as variable file
 		dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
+		dr = tuple(dr) #so we can subscript it
 		csv_headers = None;
 		sql_fields = None
 
 		if headers == None:
-			csv_headers = tuple(tuple(dr)[0].keys())# gets header by checking the keys of the firt element of the DictReader.
+			csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
 			sql_fields = "(" #generates the sql_fields we'll feed to the command
 			for i in range(len(csv_headers)):
 				sql_fields += csv_headers[i]
@@ -64,7 +65,7 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 				else:
 					values += ")"
 
-			c.execute(f"INSERT INTO roster {sql_fields} VALUES ({values})") #insert the values in order of name, age, id into the database.
+			c.execute(f"INSERT INTO roster {sql_fields} VALUES {values}") #insert the values in order of name, age, id into the database.
 
 fill_table("roster", "students.csv")
 #==========================================================
