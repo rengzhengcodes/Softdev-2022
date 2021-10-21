@@ -28,8 +28,6 @@ def create_table(name: str, fields: dict) -> None:
 			cmd += ");"
 	c.execute(cmd)
 
-create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
-
 def fill_table(table: str, filename: str, headers: dict = None) -> None:
 	'''table = table you want to fill
 	filename = csv you're importing
@@ -69,14 +67,19 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 				else:
 					values += entry[header]
 
-				if i != (len(csv_headers) - 1): #if its not the last element, ad a comma
+				if i != (len(csv_headers) - 1): #if its not the last element, add a comma
 					values += ", "
 				else:
 					values += ")"
 
-			c.execute(f"INSERT INTO roster {sql_fields} VALUES {values}") #insert the values in order of name, age, id into the database.
+			c.execute(f"INSERT INTO roster {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
 
+#creates roster of students
+create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 fill_table("roster", "students.csv")
+#creates course table
+create_table("courses", {"code":"TEXT NOT NULL", "mark":"INTEGER NOT NULL", "id":"INTEGER NOT NULL"}) #here, ids overlap
+fill_table("courses", "courses.csv")
 #==========================================================
 
 db.commit() #save changes
