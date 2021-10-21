@@ -23,7 +23,8 @@ everyone has an id, those are unique so they should be primary keys.'''
 
 with open("students.csv", "r") as file: #opens csv file as variable file
 	dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
-
+	for entry in dr:
+		c.execute(f"INSERT INTO roster VALUES ({entry['name']}, {entry['age']}, {entry['id']})")
 
 
 command = ""          # test SQL stmt in sqlite3 shell, save as string
