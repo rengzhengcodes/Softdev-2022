@@ -22,7 +22,7 @@ SQLite - good because you don't need to spin up a server + hookins to interact w
 		- completes the stack, database powering site
 	- reads string not in quotes as field headers. Don't do that
 	- seems to sort by primary key
-
+	- if you tuple a DictReader it also gets rid of it if you don't reassign
 ---
 
 Relational database
