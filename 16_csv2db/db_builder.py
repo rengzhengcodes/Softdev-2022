@@ -1,7 +1,7 @@
-#Clyde "Thluffy" Sinclair
-#SoftDev  
-#skeleton/stub :: SQLITE3 BASICS
-#Dec 2020 -- The Time of the Rona
+#Team02 - Renggeng Zheng Ivan Lam Lia Nelson
+#SoftDev
+#K16 -- Relational Databases -- SQLite
+#2021-10-20
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -25,5 +25,3 @@ c.execute(command)    # run SQL statement
 
 db.commit() #save changes
 db.close()  #close database
-
-
