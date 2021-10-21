@@ -28,7 +28,7 @@ def create_table(name: str, fields: dict) -> None:
 			cmd += ");"
 	c.execute(cmd)
 
-create_table("roster", {"uname":"TEXT NOT NULL", "uage":"INTEGER NOT NULL", "uid":"INTEGER PRIMARY KEY"})
+create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 
 def fill_table(table: str, filename: str, headers: dict = None) -> None:
 	'''table = table you want to fill
@@ -76,7 +76,7 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 
 			c.execute(f"INSERT INTO roster {sql_fields} VALUES {values}") #insert the values in order of name, age, id into the database.
 
-fill_table("roster", "students.csv", {"name":"uname","age":"uage","id":"uid"})
+fill_table("roster", "students.csv")
 #==========================================================
 
 db.commit() #save changes
