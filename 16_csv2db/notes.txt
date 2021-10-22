@@ -1,3 +1,8 @@
+#Team02 - Renggeng Zheng Ivan Lam Lia Nelson
+#SoftDev
+#K16 -- Relational Databases -- SQLite
+#2021-10-20
+
 cursor = indicator to where you are in DB
 Like cursor ina  text editor (changes happen here)
 
