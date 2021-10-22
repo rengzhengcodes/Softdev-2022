@@ -2,7 +2,7 @@
 #SoftDev
 #K16 -- Relational Databases -- SQLite
 #2021-10-20
-#Time Spent: 120 Minutes
+#Time Spent: 7.5 People Hours
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -72,9 +72,21 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 					values += ", "
 				else:
 					values += ")"
-
+			exists(table, entry)
 			c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
+def exists(table: str, record: dict) -> bool:
+	where_query = "";
+	for field, value in record.items():
+		where_query += field;
+		if type(value) is str:
+			where_query += f" = \"{value}\""
+		else:
+			where_query += f" = {value}"
+		where_query += ", "
 
+	print(where_query)
+	c.execute(f"SELECT count(*) FROM {table} WHERE {where_query}")
+	return c.fetchone("WHERE EXISTS ")[0] != None
 #creates roster of students
 create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 fill_table("roster", "students.csv")
