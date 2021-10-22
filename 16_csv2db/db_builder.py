@@ -2,6 +2,7 @@
 #SoftDev
 #K16 -- Relational Databases -- SQLite
 #2021-10-20
+#Time Spent: 120 Minutes
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O
@@ -19,7 +20,7 @@ def create_table(name: str, fields: dict) -> None:
 	fields is a dict mapping a field name to its attributes'''
 	fields = tuple(fields.items()) #converts fields to a tuple for easy access
 
-	cmd = f"CREATE TABLE {name}("#starter command for row creation
+	cmd = f"CREATE TABLE IF NOT EXISTS {name}("#starter command for row creation
 	for i in range(len(fields)): #iterate through fields by index
 		cmd += f"{fields[i][0]} {fields[i][1]}"
 		if i != (len(fields) - 1): #if this is not the last element in the list, add a comma
