@@ -83,7 +83,7 @@ def exists(table: str, record: dict) -> bool:
 		else:
 			where_query += f" = {value}"
 		where_query += ", "
-
+	where_query = where_query[0:-2]
 	print(where_query)
 	c.execute(f"SELECT count(*) FROM {table} WHERE {where_query}")
 	return c.fetchone("WHERE EXISTS ")[0] != None
