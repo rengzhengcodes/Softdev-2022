@@ -72,9 +72,9 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 					values += ", "
 				else:
 					values += ")"
-			exists(table, entry)
-			c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
-def exists(table: str, record: dict) -> bool:
+			if not exists(table, entry):
+				c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
+def exists(table: str, record: dict) -> bool: # checks if a record already exists
 	where_query = "";
 	for field, value in record.items():
 		where_query += field;
@@ -82,11 +82,11 @@ def exists(table: str, record: dict) -> bool:
 			where_query += f" = \"{value}\""
 		else:
 			where_query += f" = {value}"
-		where_query += ", "
-	where_query = where_query[0:-2]
-	print(where_query)
+		where_query += " AND "
+	where_query = where_query[0:-5] # strips last AND
+	#print(where_query)
 	c.execute(f"SELECT count(*) FROM {table} WHERE {where_query}")
-	return c.fetchone("WHERE EXISTS ")[0] != None
+	return c.fetchone()[0] != None
 #creates roster of students
 create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 fill_table("roster", "students.csv")
