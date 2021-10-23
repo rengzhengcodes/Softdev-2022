@@ -84,9 +84,10 @@ def exists(table: str, record: dict) -> bool: # checks if a record already exist
 			where_query += f" = {value}"
 		where_query += " AND "
 	where_query = where_query[0:-5] # strips last AND
-	#print(where_query)
-	c.execute(f"SELECT count(*) FROM {table} WHERE {where_query}")
-	return c.fetchone()[0] != None
+	# print(where_query)
+	c.execute(f"SELECT COUNT(1) FROM {table} WHERE {where_query}")
+	# print(c.fetchone()[0])
+	return c.fetchone()[0] != 0 #if it does not exist, it returns 0 from fetchone()
 #creates roster of students
 create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 fill_table("roster", "students.csv")
