@@ -29,7 +29,7 @@ def create_table(name: str, fields: dict) -> None:
 			cmd += ");"
 	c.execute(cmd)
 
-def fill_table(table: str, filename: str, headers: dict = None) -> None:
+def fill_table(table: str, filename: str) -> None:
 	'''table = table you want to fill
 	filename = csv you're importing
 	headers = dict matching csv header names to field header names'''
@@ -37,27 +37,14 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 	with open(filename, "r") as file: #opens csv file as variable file
 		dr = csv.DictReader(file) # reads the file in, with a list with dictionaries where the first row are the keys and the values are the values of the row corresponding to that entry.
 		dr = tuple(dr) #so we can subscript it
-		csv_headers = None;
-		sql_fields = None
-
-		if headers == None:
-			csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
-			sql_fields = "(" #generates the sql_fields we'll feed to the command
-			for i in range(len(csv_headers)):
-				sql_fields += csv_headers[i]
-				if i != (len(csv_headers) - 1): # if its not the last element, add a comma
-					sql_fields += ", "
-				else:
-					sql_fields += ")"
-		else:
-			csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
-			sql_fields = "(" #generates the sql_fields we'll feed to the command
-			for i in range(len(csv_headers)):
-				sql_fields += headers[csv_headers[i]]
-				if i != (len(csv_headers) - 1): # if its not the last element, add a comma
-					sql_fields += ", "
-				else:
-					sql_fields += ")"
+		csv_headers = tuple(dr[0].keys())# gets header by checking the keys of the firt element of the DictReader.
+		sql_fields = "(" #generates the sql_fields we'll feed to the command
+		for i in range(len(csv_headers)):
+			sql_fields += csv_headers[i]
+			if i != (len(csv_headers) - 1): # if its not the last element, add a comma
+				sql_fields += ", "
+			else:
+				sql_fields += ")"
 
 		for entry in dr: #for every entry in the DictReader
 			values = "("
@@ -77,12 +64,12 @@ def fill_table(table: str, filename: str, headers: dict = None) -> None:
 def exists(table: str, record: dict) -> bool: # checks if a record already exists
 	where_query = "";
 	for field, value in record.items():
-		where_query += field;
-		if type(value) is str:
+		where_query += field #adds field to where_query
+		if type(value) is str: #adds quotes to query for strings for equality checks
 			where_query += f" = \"{value}\""
 		else:
 			where_query += f" = {value}"
-		where_query += " AND "
+		where_query += " AND " #connects elements
 	where_query = where_query[0:-5] # strips last AND
 	# print(where_query)
 	c.execute(f"SELECT COUNT(1) FROM {table} WHERE {where_query}")
