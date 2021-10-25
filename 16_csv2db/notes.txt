@@ -2,6 +2,7 @@
 #SoftDev
 #K16 -- Relational Databases -- SQLite
 #2021-10-20
+#Time Spent: 7.5 People Hours
 
 cursor = indicator to where you are in DB
 Like cursor ina  text editor (changes happen here)
