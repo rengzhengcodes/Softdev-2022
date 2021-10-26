@@ -1,8 +1,8 @@
 #Team02 - Renggeng Zheng Ivan Lam Lia Nelson
 #SoftDev
-#K16 -- Relational Databases -- SQLite
-#2021-10-20
-#Time Spent: 7.5 People Hours
+#K17 -- The full stack -- making a wiki
+#2021-10-25
+#Time Spent: 40 People Minutes
 
 import sqlite3   #enable control of an sqlite database
 import csv       #facilitate CSV I/O

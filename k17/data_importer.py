@@ -1,3 +1,9 @@
+#Team02 - Renggeng Zheng Ivan Lam Lia Nelson
+#SoftDev
+#K17 -- The full stack -- making a wiki
+#2021-10-25
+#Time Spent: 40 People Minutes
+
 from db_builder import Db_builder
 from os.path import exists
 
