@@ -82,10 +82,9 @@ class Db_builder:
 	def __del__(self): #action upon being deleted
 		self.exit_db()
 
-dbb = Db_builder("discobandit.db")
-
 if __name__ == "__main__": #runs if not imported; for testing
 	#creates roster of students
+	dbb = Db_builder("discobandit.db")
 	dbb.create_table("roster", {"name":"TEXT NOT NULL", "age":"INTEGER NOT NULL", "id":"INTEGER PRIMARY KEY"})
 	dbb.fill_table("roster", "students.csv")
 	#creates course table
