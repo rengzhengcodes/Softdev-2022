@@ -59,16 +59,15 @@ class Db_builder:
 
 	def exists(self, table: str, record: dict) -> bool: # checks if a record already exists
 		where_query = "";
+		#print(record)
 		for field, value in record.items():
 			where_query += field #adds field to where_query
-			if type(value) is str: #adds quotes to query for strings for equality checks
-				where_query += f" = \"{value}\""
-			else:
-				where_query += f" = {value}"
+			where_query += f"=:{field}" #adds key name for dict-based execute for input safety
 			where_query += " AND " #connects elements
 		where_query = where_query[0:-5] # strips last AND
 		# print(where_query)
-		self.c.execute(f"SELECT COUNT(1) FROM {table} WHERE {where_query}")
+		#print(where_query)
+		self.c.execute(f"SELECT COUNT(1) FROM {table} WHERE {where_query}", record)
 		# print(c.fetchone()[0])
 		return self.c.fetchone()[0] != 0 #if it does not exist, it returns 0 from fetchone()
 
