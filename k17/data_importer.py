@@ -1,4 +1,4 @@
-import db_builder
+from db_builder import Db_builder
 from os.path import exists
 
 db_name = "pages.db"
