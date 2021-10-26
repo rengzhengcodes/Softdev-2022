@@ -1,0 +1,3 @@
+Note:
+According to SO, relational databases are unable to store lists of values unless you serialize them (convert them into byte code)
+	- this is annoying as we now can't get unlimited of any field, or if we want to, we cannot do any meaningful SQL operations like sorting.
