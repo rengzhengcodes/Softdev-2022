@@ -59,6 +59,7 @@ class Db_builder:
 						values += ")"
 				if not self.exists(table, entry):
 					self.c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
+
 	def exists(self, table: str, record: dict) -> bool: # checks if a record already exists
 		where_query = "";
 		for field, value in record.items():
@@ -73,9 +74,13 @@ class Db_builder:
 		self.c.execute(f"SELECT COUNT(1) FROM {table} WHERE {where_query}")
 		# print(c.fetchone()[0])
 		return self.c.fetchone()[0] != 0 #if it does not exist, it returns 0 from fetchone()
+
 	def exit_db(self): #closes db when object no longer in use
 		self.db.commit() #save changes
 		self.db.close()  #close database
+
+	def __del__(self): #action upon being deleted
+		self.exit_db()
 
 dbb = Db_builder("discobandit.db")
 
@@ -86,4 +91,4 @@ if __name__ == "__main__": #runs if not imported; for testing
 	#creates course table
 	dbb.create_table("courses", {"code":"TEXT NOT NULL", "mark":"INTEGER NOT NULL", "id":"INTEGER NOT NULL"}) #here, ids overlap
 	dbb.fill_table("courses", "courses.csv")
-	dbb.exit_db()
+	del dbb
