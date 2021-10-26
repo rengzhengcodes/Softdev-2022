@@ -45,20 +45,17 @@ class Db_builder:
 					sql_fields += ")"
 
 			for entry in dr: #for every entry in the DictReader
-				values = "("
+				number_of_values = "("
+				list_of_values = list()
 				for i in range(len(csv_headers)):
 					header = csv_headers[i] #gets the header at index
-					if type(entry[header]) is str: # if the entry is a string add quotes so its not confused with a field
-						values += f"\"{entry[header]}\""
-					else:
-						values += entry[header]
+					list_of_values.append(entry[header])
+					number_of_values += "?, " #sql safe replacement
 
-					if i != (len(csv_headers) - 1): #if its not the last element, add a comma
-						values += ", "
-					else:
-						values += ")"
+				number_of_values = number_of_values[0:-2] + ")" #removes ending ", " and adds ")"
+
 				if not self.exists(table, entry):
-					self.c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
+					self.c.execute(f"INSERT INTO {table} {sql_fields} VALUES {number_of_values}", list_of_values) #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
 
 	def exists(self, table: str, record: dict) -> bool: # checks if a record already exists
 		where_query = "";
