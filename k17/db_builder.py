@@ -13,7 +13,7 @@ class Db_builder:
 		self.db = sqlite3.connect(self.DB_FILE) #open if file exists, otherwise create
 		self.c = self.db.cursor()               #facilitate db ops -- you will use cursor to trigger db events
 
-	def create_table(name: str, fields: dict) -> None:
+	def create_table(self, name: str, fields: dict) -> None:
 		'''creates a table with the given name and fields
 		fields is a dict mapping a field name to its attributes'''
 		fields = tuple(fields.items()) #converts fields to a tuple for easy access
@@ -27,7 +27,7 @@ class Db_builder:
 				cmd += ");"
 		self.c.execute(cmd)
 
-	def fill_table(table: str, filename: str) -> None:
+	def fill_table(self, table: str, filename: str) -> None:
 		'''table = table you want to fill
 		filename = csv you're importing
 		headers = dict matching csv header names to field header names'''
@@ -57,9 +57,9 @@ class Db_builder:
 						values += ", "
 					else:
 						values += ")"
-				if not exists(table, entry):
+				if not self.exists(table, entry):
 					self.c.execute(f"INSERT INTO {table} {sql_fields} VALUES {values}") #insert the values correlating to csv headers database. Sql_fields in case fields are a different order from the csv, so everything goes to the right place
-	def exists(table: str, record: dict) -> bool: # checks if a record already exists
+	def exists(self, table: str, record: dict) -> bool: # checks if a record already exists
 		where_query = "";
 		for field, value in record.items():
 			where_query += field #adds field to where_query
@@ -73,7 +73,7 @@ class Db_builder:
 		self.c.execute(f"SELECT COUNT(1) FROM {table} WHERE {where_query}")
 		# print(c.fetchone()[0])
 		return self.c.fetchone()[0] != 0 #if it does not exist, it returns 0 from fetchone()
-	def exit_db(): #closes db when object no longer in use
+	def exit_db(self): #closes db when object no longer in use
 		self.db.commit() #save changes
 		self.db.close()  #close database
 
