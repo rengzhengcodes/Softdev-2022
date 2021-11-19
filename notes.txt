@@ -1,0 +1,4 @@
+demo accounts shall be had
+ * In the future, you are assumed to have this on lock.
+preinstalls
+ * You know pip installs now.
