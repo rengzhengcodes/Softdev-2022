@@ -30,11 +30,15 @@ This API provides...
 ### Quotas:
  - This is an open source API. there are no quotas listed anywhere on the website.
 ## The Good:
- - Open source, so if you
+ - Open source, so if you have an issue, you can code the fix yourself.
+ - Data is returned in a JSON format
+
 ## The Bad:
- - Open source and not officially run by WoTC (D&D creators)
+ - Open source and not officially run by WoTC (D&D creators). This means any issues you have may take a while to resolve.
 ## The Ugly:
-- ...
+ - This uses WoTC SRD material. This means it is operating legally in a clean zone, but could be subject to legal issues should WoTC decide to pull the rug on their SRD program.
+ - You will not get any D&D supplements like XGtE and SCAG as those are WoTC property.
+ - You cannot add homebrew to this like you could with the DNDBeyond infrastructure.
 
 
 **Location:** https://www.dnd5eapi.co/api/
