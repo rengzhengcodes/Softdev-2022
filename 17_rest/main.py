@@ -1,4 +1,4 @@
 #Renggeng Zheng
 #SoftDev
-#K<nn> -- <Title/Topic/Summary>
-#<yyyy>-<mm>-<dd>
+#K17 -- Rest API Exploration
+#2021-11-19
