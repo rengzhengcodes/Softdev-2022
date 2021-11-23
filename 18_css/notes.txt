@@ -1,3 +1,4 @@
+Lorem Ipsum: https://fungenerators.com/lorem-ipsum/pirate/
 Inline CSS
  - divs are very important to separate HTML portions when CSSing.
  - It is difficult to downright impossible to do a lot of CSS designs without divs.
