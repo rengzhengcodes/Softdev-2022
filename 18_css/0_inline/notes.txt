@@ -1,0 +1,4 @@
+Inline CSS
+ - divs are very important to separate HTML portions when CSSing.
+ - It is difficult to downright impossible to do a lot of CSS designs without divs.
+ - Also very messy and repetitive. Code looks very bloated and lots of repeating portions.
