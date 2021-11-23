@@ -11,7 +11,8 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-	urlib.request()
+	request = urllib.request(open("key_nasa.txt", -r))
+	print(request)
 	return render_template("main.html", pic = pic, )
 
 if __name__ == "__main__":  # true if this file NOT imported
