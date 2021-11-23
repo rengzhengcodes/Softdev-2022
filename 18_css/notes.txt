@@ -3,3 +3,9 @@ Inline CSS
  - divs are very important to separate HTML portions when CSSing.
  - It is difficult to downright impossible to do a lot of CSS designs without divs.
  - Also very messy and repetitive. Code looks very bloated and lots of repeating portions.
+Internal CSS
+ - Classes make for good organization
+ - makes code a lot clearer but big CSS block at top
+ External CSS
+ - Classes make for good organization
+ - Extremely similar in style to internal CSS sans the linking versus big CSS block.
