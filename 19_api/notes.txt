@@ -1,0 +1,8 @@
+#Renggeng Zheng
+#SoftDev
+#K19 -- Using Rest APIs - NASA
+#2021-11-23
+notes:
+The API uses a get request
+The API returns a JSON file as a string.
+JSON loading just forms a dictionary out of the JSON, then you can proceed as normal.
