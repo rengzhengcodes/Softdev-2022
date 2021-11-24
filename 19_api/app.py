@@ -13,8 +13,11 @@ app = Flask(__name__)
 def index():
 	url = "https://api.nasa.gov/planetary/apod?api_key="
 	url += str(open("key_nasa.txt", "r").read())
+	## print(url)
 	request = urllib.request.urlopen(url)
+	## print(request)
 	data = json.loads(request.read())
+	## print(data)
 	return render_template("main.html", pic=data['url'], explanation=data['explanation'])
 
 if __name__ == "__main__":  # true if this file NOT imported
