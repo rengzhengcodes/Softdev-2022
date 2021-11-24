@@ -3,6 +3,8 @@
 #K19 -- Using Rest APIs - NASA
 #2021-11-23
 notes:
-The API uses a get request
-The API returns a JSON file as a string.
-JSON loading just forms a dictionary out of the JSON, then you can proceed as normal.
+ - The API uses a get request
+ - The API returns a JSON file as a string.
+ - JSON loading just forms a dictionary out of the JSON, then you can proceed as normal.
+ - urllib3 has a lot of complications like a poolmanager that urllib2 and urllib do not. urllib was used for simplicity because the original used urllib3.
+ - Remember, you need to read an opened file/site or else it's just an object reference.
