@@ -9,3 +9,5 @@ Frontend Framework - prewritten CSS/JS that is a template to speed up frontend d
 CDN - content delivery network
  - CSS, videos, assets needed to load website
  - Different from main website with content
+ - Stuff appears faster (esp. with mobile devices jumping nodes).
+	 - Mirrors of content near the periphery of network so access faster.
