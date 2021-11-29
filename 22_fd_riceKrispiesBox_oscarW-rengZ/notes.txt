@@ -2,4 +2,8 @@ Rice Krispies Box - Renggeng Zheng, Oscar Wang
 Softdev
 K22 - Frameworks (Foundation)
 2021-11-29
-Time Spent: 
+Time Spent:
+
+CDN - content delivery network
+ - CSS, videos, assets needed to load website
+ - Different from main website with content
