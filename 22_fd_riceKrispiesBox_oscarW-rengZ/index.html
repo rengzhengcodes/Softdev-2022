@@ -31,101 +31,103 @@
 		<h1>Rice Krispies Box - Renggeng Zheng, Oscar Wang</h1>
 		<div>Note: Check page source with inspect element to get the proper class names. They should be self-explanatory but just in case an example is needed</div>
 		<h2>Horizontal Splitting</h2>
-		<p>
-			The basis of horizontal spacing in <i>Foundation</i> is the "grid-x" div class. This class is always split into a width of 12 cells wide.
-			<br/>
-			Cells are integer widths, and are any container with the class "{size}-{span}" with size referring to the screen size (small, medium, or large) and span referring to how many cells horizontally it spans. They only work in the context of a grid-x div. Here are some examples of cell usage below.
-		</p>
-		<h3>Full</h3>
-		<p>This is a rudimentary display of a cell. The default cell spans the entire display</p>
-		<div class="grid-x">
-			<p class="cell">test</p>
-			<p class="cell">test</p>
-		</div>
-		<h3>Half (Six-Cell)</h3>
-		<p>Below are some ways you can split the screen with cells. The class size-signifier "small" indicates that for any screen small and above, this is the behavior. In the below case, it's saying for all screen sizes, span 6 cells wide.</p>
-		<div class="grid-x">
-			<p class="small-6 cell">test</p>
-			<p class="small-6 cell">test</p>
-		</div>
-		<h3>Thirds (Four-Cell)</h3>
-		<div class="grid-x">
-			<p class="small-4 cell">test</p>
-			<p class="small-4 cell">test</p>
-			<p class="small-4 cell">test</p>
-		</div>
-		<h3>Quarters (Three-Cell)</h3>
-		<div class="grid-x">
-			<p class="small-3 cell">test</p>
-			<p class="small-3 cell">test</p>
-			<p class="small-3 cell">test</p>
-			<p class="small-3 cell">test</p>
-		</div>
-		<h3>Sixths (Two-Cell)</h3>
-		<div class="grid-x">
-			<p class="small-2 cell">test</p>
-			<p class="small-2 cell">test</p>
-			<p class="small-2 cell">test</p>
-			<p class="small-2 cell">test</p>
-			<p class="small-2 cell">test</p>
-			<p class="small-2 cell">test</p>
-		</div>
-		<h3>Twelths (One-Cell)</h3>
-		<div class="grid-x">
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-			<p class="small-1 cell">test</p>
-		</div>
-		<h3>Margins</h3>
-		<div>Does what it says on the tin, adds margins to cells. You just make the grid-x div also a "grid-margin-x" div (append it to the end of the class name with a space, e.g. class="grid-x grid-margin-x")</div>
-		<div class="grid-x grid-margin-x">
-			<p class="small-6 cell">test</p>
-			<p class="small-6 cell">test</p>
-		</div>
-		<h3>Padding</h3>
-		<div>Does what it says on the tin, adds padding to cells. Similar to margins, except you're making it a grid-padding-x div instead.</div>
-		<div class="grid-x grid-padding-x">
-			<p class="small-6 cell">test</p>
-			<p class="small-6 cell">test</p>
-		</div>
-		<h3>Dynamic Sizing</h3>
-		<div>Add more classes! Just change small to medium/large for the width specifications. The size signifier specifies that once you are at or above this size, this is the behavior you follow. Larger size behavior always overrides smaller cell behavior. Resize the browser window to see this in action below.</div>
-		<div class="grid-x">
-			<p class="small-4 medium-6 large-8 cell">test</p>
-			<p class="small-4 medium-4 large-2 cell">test</p>
-			<p class="small-4 medium-2 large-2 cell">test</p>
-		</div>
-		<h3>Auto Sizing</h3>
-		<div>Add the "auto" class to a cell to resize to the horizontal space left available. Resize to see in action.</div>
-		<div class="grid-x">
-			<p class="small-4 medium-6 large-8 cell">test</p>
-			<p class="auto cell">test</p>
-			<p class="auto cell">test</p>
-		</div>
-		<h3>Shrinkage</h3>
-		<div>Add the "shrink" class to make cells the minimum size they need</div>
-		<div class="grid-x">
-			<p class="shrink cell">test</p>
-			<p class="auto cell">test</p>
-		</div>
-		<h3>Size-based Behavior</h3>
-		<div>
-			Specify size along with behavior to get dynamic behavior
-			<br/>
-			*Note: shrink and auto without a size qualifier are small-shrink and small-auto
-		</div>
-		<div class="grid-x">
-			<p class="shrink medium-6 large-auto cell">test</p>
-			<p class="auto medium-6 large-shrink cell">test</p>
-		</div>
+			<p>
+				The basis of horizontal spacing in <i>Foundation</i> is the "grid-x" div class. This class is always split into a width of 12 cells wide.
+				<br/>
+				Cells are integer widths, and are any container with the class "{size}-{span}" with size referring to the screen size (small, medium, or large) and span referring to how many cells horizontally it spans. They only work in the context of a grid-x div. Here are some examples of cell usage below.
+			</p>
+			<h3>Full</h3>
+			<p>This is a rudimentary display of a cell. The default cell spans the entire display</p>
+			<div class="grid-x">
+				<p class="cell">test</p>
+				<p class="cell">test</p>
+			</div>
+			<h3>Half (Six-Cell)</h3>
+				<p>Below are some ways you can split the screen with cells. The class size-signifier "small" indicates that for any screen small and above, this is the behavior. In the below case, it's saying for all screen sizes, span 6 cells wide.</p>
+				<div class="grid-x">
+					<p class="small-6 cell">test</p>
+					<p class="small-6 cell">test</p>
+				</div>
+			<h3>Thirds (Four-Cell)</h3>
+				<div class="grid-x">
+					<p class="small-4 cell">test</p>
+					<p class="small-4 cell">test</p>
+					<p class="small-4 cell">test</p>
+				</div>
+			<h3>Quarters (Three-Cell)</h3>
+				<div class="grid-x">
+					<p class="small-3 cell">test</p>
+					<p class="small-3 cell">test</p>
+					<p class="small-3 cell">test</p>
+					<p class="small-3 cell">test</p>
+				</div>
+			<h3>Sixths (Two-Cell)</h3>
+				<div class="grid-x">
+					<p class="small-2 cell">test</p>
+					<p class="small-2 cell">test</p>
+					<p class="small-2 cell">test</p>
+					<p class="small-2 cell">test</p>
+					<p class="small-2 cell">test</p>
+					<p class="small-2 cell">test</p>
+				</div>
+			<h3>Twelths (One-Cell)</h3>
+				<div class="grid-x">
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+					<p class="small-1 cell">test</p>
+				</div>
+			<h3>Margins</h3>
+				<p>Does what it says on the tin, adds margins to cells. You just make the grid-x div also a "grid-margin-x" div (append it to the end of the class name with a space, e.g. class="grid-x grid-margin-x")</p>
+				<div class="grid-x grid-margin-x">
+					<p class="small-6 cell">test</p>
+					<p class="small-6 cell">test</p>
+				</div>
+			<h3>Padding</h3>
+				<p>Does what it says on the tin, adds padding to cells. Similar to margins, except you're making it a grid-padding-x div instead.</p>
+				<div class="grid-x grid-padding-x">
+					<p class="small-6 cell">test</p>
+					<p class="small-6 cell">test</p>
+				</div>
+			<h3>Dynamic Sizing</h3>
+				<p>Add more classes! Just change small to medium/large for the width specifications. The size signifier specifies that once you are at or above this size, this is the behavior you follow. Larger size behavior always overrides smaller cell behavior. Resize the browser window to see this in action below.</p>
+				<div class="grid-x">
+					<p class="small-4 medium-6 large-8 cell">test</p>
+					<p class="small-4 medium-4 large-2 cell">test</p>
+					<p class="small-4 medium-2 large-2 cell">test</p>
+				</div>
+			<h3>Auto Sizing</h3>
+				<p>Add the "auto" class to a cell to resize to the horizontal space left available. Resize to see in action.</p>
+				<div class="grid-x">
+					<p class="small-4 medium-6 large-8 cell">test</p>
+					<p class="auto cell">test</p>
+					<p class="auto cell">test</p>
+				</div>
+			<h3>Shrinkage</h3>
+				<p>Add the "shrink" class to make cells the minimum size they need</p>
+				<div class="grid-x">
+					<p class="shrink cell">test</p>
+					<p class="auto cell">test</p>
+				</div>
+			<h3>Size-based Behavior</h3>
+				<p>
+					Specify size along with behavior to get dynamic behavior
+					<br/>
+					*Note: shrink and auto without a size qualifier are small-shrink and small-auto
+				</p>
+				<div class="grid-x">
+					<p class="shrink medium-6 large-auto cell">test</p>
+					<p class="auto medium-6 large-shrink cell">test</p>
+				</div>
+			<h3>Size-based Hiding</h3>
+				<p>Add the class "hidden-on-{size}" to hide the cells on certain sizes.</p>
 	</body>
 </html>
