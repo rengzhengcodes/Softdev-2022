@@ -5,7 +5,15 @@ K23 - Frameworks (Bootstrap)
 Time Spent: 4 hours
 
 # Disco
+
 # QCC
+ * Containers add margin to content to center it on the page.
+ * Bootstrap seems to not have a lot of CSS on the nav, at least with color specification.
+	 * Good for customizability, bad for quickly getting something that looks nice.
+ * Container breakpoint is it follows margin rules IFF it meets the minimum size requirements. Like Foundation cells.
+ * Containers are the Bootstrap equivalent of Foundation's grid-x.
+	 * cols are their cell equivalent. 12 1-width cols fit into a horizontal space. Size specifications just like cells.
+	 * Rows specify which row the cols are on. Foundation does this automagically. Bootstrap does not.
 # Q0
  * N/A
 # Q1
