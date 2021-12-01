@@ -31,34 +31,53 @@
 	<body>
 		<h1>Rice Krispies Box - Renggeng Zheng, Oscar Wang</h1>
 		<div>Note: Check page source with inspect element to get the proper class names. They should be self-explanatory but just in case an example is needed</div>
-		<div class="top-bar">
-			<div class="top-bar-left">
-				<ul class="dropdown menu" data-dropdown-menu>
-					<li class="menu-text">Foundation Station</li>
-					<li>
-						<a href="#">One</a>
-						<ul class="menu vertical">
-							<li><a href="#">One</a></li>
-							<li><a href="#">Two</a></li>
-							<li><a href="#">Three</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Two</a></li>
-					<li><a href="#">Three</a></li>
-				</ul>
+		<h2>Topbar</h2>
+			<div class="top-bar">
+				<div class="top-bar-left">
+					<ul class="dropdown menu" data-dropdown-menu>
+						<li class="menu-text">Foundation Station</li>
+						<li>
+							<a href="#">One</a>
+							<ul class="menu vertical">
+								<li><a href="#">One</a></li>
+								<li><a href="#">Two</a></li>
+								<li><a href="#">Three</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Two</a></li>
+						<li><a href="#">Three</a></li>
+					</ul>
+				</div>
+				<div class="top-bar-right">
+					<ul class="menu">
+						<li><input type="search" placeholder="Search"></li>
+						<li><button type="button" class="button">Search</button></li>
+					</ul>
+				</div>
 			</div>
-			<div class="top-bar-right">
-				<ul class="menu">
-					<li><input type="search" placeholder="Search"></li>
-					<li><button type="button" class="button">Search</button></li>
-				</ul>
+			<p>
+				The above is a rudimentary Foundation navbar, which is a div with the "nav-bar" class. It has two divs inside it, "top-bar-left" and "top-bar-right" that splits the navbar into a large primary left section and smaller right section. There are also menus, vertical and horizontal, that you can use, however dropdown menus require javascript.
+				<br/>
+				MenDID NOT WATCH.us in general, though, are just tables with the class "menu". By default they are horizontal, but by adding the "vertical" class they become vertical.
+			</p>
+		<h2>Callouts</h2>
+			<p>These are messages that are distinct in color from their surrounding contents but subdued to not clas with themes.</p>
+			<div class="callout secondary">
+				<h5>Secondary Callout</h5>
 			</div>
-		</div>
-		<p>
-			The above is a rudimentary Foundation navbar, which is a div with the "nav-bar" class. It has two divs inside it, "top-bar-left" and "top-bar-right" that splits the navbar into a large primary left section and smaller right section. There are also menus, vertical and horizontal, that you can use, however dropdown menus require javascript.
-			<br/>
-			Menus in general, though, are just tables with the class "menu". By default they are horizontal, but by adding the "vertical" class they become vertical.
-		</p>
+			<p>
+				It is done by a div with the callout class, as well as one of the classes "secondary", "primary", "success", "warning", and "alert", which just change the background color and indicate the purpose of the callout
+				<br/>
+				Adding a size class like "small" or "large" will change the size of the callout, adding more or less padding to it.
+			</p>
+			<div class="callout alert" data-closable="slide-out-right">
+				<p>Close me!</p>
+				<h3>NOTE: I require javascript and thus don't currently work.</h3>
+				<button class="close-button" aria-label="Dismiss alert" type="button" data-close>
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<p>With JS, adding the data-closable attribute will allow it to be closed, but we don't have that currently.</p>
 		<h2>Horizontal Splitting</h2>
 			<p>
 				The basis of horizontal spacing in <i>Foundation</i> is the "grid-x" div class. This class is always split into a width of 12 cells wide.
