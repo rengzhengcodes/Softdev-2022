@@ -128,11 +128,17 @@
 					<p class="auto medium-6 large-shrink cell">test</p>
 				</div>
 			<h3>Size-based Hiding</h3>
-				<p>Add the class "hidden-on-{size}" to hide the cells on certain sizes.</p>
+				<p>Add the class "hide-for-{size}-only" to hide the cells on certain sizes. Resize your window to see behavior.</p>
 				<div class="grid-x">
-					<p class="hidden-on-small small-6 cell">Hides on small</p>
-					<p class="hidden-on-medium small-6 cell">Hides on medium</p>
-					<p class="hidden-on-large small-6 cell">Hides on large</p>
+					<p class="hide-for-small-only small-6 cell">Hides on small</p>
+					<p class="hide-for-medium-only small-6 cell">Hides on medium</p>
+					<p class="hide-for-large-only small-6 cell">Hides on large</p>
 				</div>
+				<p>
+					Note 1: You can use "hide-for-{size}" to hide containers at or above a certain size (small doesn't exist because then it would forever be hidden)
+					<br/>
+					Note 2: You can use "show-for-{size}" to show containers at or above a certain size (again, small doesn't exist because that would be the behavior at all sizes.)
+				</p>
+
 	</body>
 </html>
