@@ -2,7 +2,7 @@ Rice Krispies Box - Renggeng Zheng, Oscar Wang
 Softdev
 K22 - Frameworks (Foundation)
 2021-11-29
-Time Spent:
+Time Spent: 4 hours
 
 Frontend Framework - prewritten CSS/JS that is a template to speed up frontend development.
 
