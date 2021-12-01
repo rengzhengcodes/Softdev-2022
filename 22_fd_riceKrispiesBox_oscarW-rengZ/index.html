@@ -10,7 +10,7 @@
 	<head>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css" crossorigin="anonymous">
-	<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js" crossorigin="anonymous"></script>
 		<title>Foundation Exploration</title>
 	</head>
 	<style media="screen">
@@ -31,54 +31,24 @@
 	<body>
 		<h1>Rice Krispies Box - Renggeng Zheng, Oscar Wang</h1>
 		<div>Note: Check page source with inspect element to get the proper class names. They should be self-explanatory but just in case an example is needed</div>
-		<h2>Topbar</h2>
-			<div class="top-bar">
-				<div class="top-bar-left">
-					<ul class="dropdown menu" data-dropdown-menu>
-						<li class="menu-text">Foundation Station</li>
-						<li>
-							<a href="#">One</a>
-							<ul class="menu vertical">
-								<li><a href="#">One</a></li>
-								<li><a href="#">Two</a></li>
-								<li><a href="#">Three</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Two</a></li>
-						<li><a href="#">Three</a></li>
-					</ul>
-				</div>
-				<div class="top-bar-right">
-					<ul class="menu">
-						<li><input type="search" placeholder="Search"></li>
-						<li><button type="button" class="button">Search</button></li>
-					</ul>
-				</div>
+		<div class="top-bar">
+			<div class="top-bar-left">
+				<ul class="dropdown menu" data-dropdown-menu>
+					<li class="menu-text">Foundation Station</li>
+					<li><a href="#XY">XY Grids</a></li>
+					<li><a href="#vis">Visibility</a></li>
+					<li><a href="#forms">Forms</a></li>
+					<li><a href="#cards">Cards</a></li>
+				</ul>
 			</div>
-			<p>
-				The above is a rudimentary Foundation navbar, which is a div with the "nav-bar" class. It has two divs inside it, "top-bar-left" and "top-bar-right" that splits the navbar into a large primary left section and smaller right section. There are also menus, vertical and horizontal, that you can use, however dropdown menus require javascript.
-				<br/>
-				MenDID NOT WATCH.us in general, though, are just tables with the class "menu". By default they are horizontal, but by adding the "vertical" class they become vertical.
-			</p>
-		<h2>Callouts</h2>
-			<p>These are messages that are distinct in color from their surrounding contents but subdued to not clas with themes.</p>
-			<div class="callout secondary">
-				<h5>Secondary Callout</h5>
+			<div class="top-bar-right">
+				<ul class="menu">
+					<li><input type="search" placeholder="Search"></li>
+					<li><button type="button" class="button">Search</button></li>
+				</ul>
 			</div>
-			<p>
-				It is done by a div with the callout class, as well as one of the classes "secondary", "primary", "success", "warning", and "alert", which just change the background color and indicate the purpose of the callout
-				<br/>
-				Adding a size class like "small" or "large" will change the size of the callout, adding more or less padding to it.
-			</p>
-			<div class="callout alert" data-closable="slide-out-right">
-				<p>Close me!</p>
-				<h3>NOTE: I require javascript and thus don't currently work.</h3>
-				<button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<p>With JS, adding the data-closable attribute will allow it to be closed, but we don't have that currently.</p>
-		<h2>Horizontal Splitting</h2>
+		</div>
+		<h2 id="XY">Horizontal Splitting</h2>
 			<p>
 				The basis of horizontal spacing in <i>Foundation</i> is the "grid-x" div class. This class is always split into a width of 12 cells wide.
 				<br/>
@@ -175,18 +145,103 @@
 					<p class="shrink medium-6 large-auto cell">test</p>
 					<p class="auto medium-6 large-shrink cell">test</p>
 				</div>
-			<h3>Size-based Hiding</h3>
+			<h3 id="vis">Size-based Hiding</h3>
 				<p>Add the class "hide-for-{size}-only" to hide the cells on certain sizes. Resize your window to see behavior.</p>
-				<div class="grid-x">
-					<p class="hide-for-small-only small-6 cell">Hides on small</p>
-					<p class="hide-for-medium-only small-6 cell">Hides on medium</p>
-					<p class="hide-for-large-only small-6 cell">Hides on large</p>
-				</div>
+				<p class="hide-for-small-only">Hides on small</p>
+				<p class="hide-for-medium-only">Hides on medium</p>
+				<p class="hide-for-large-only">Hides on large</p>
 				<p>
 					Note 1: You can use "hide-for-{size}" to hide containers at or above a certain size (small doesn't exist because then it would forever be hidden)
 					<br/>
 					Note 2: You can use "show-for-{size}" to show containers at or above a certain size (again, small doesn't exist because that would be the behavior at all sizes.)
 				</p>
+			<h3 id="forms">Forms</h3>
+				<p>
+					Forms are created with the form tags you are already familiar with and stylized using Foundation's grid system.
+				</p>
+				<form>
+					<div class="grid-container">
+						<label>
+							Number Selector
+							<input type="number" value="123">
+						</label>
+						<div class="grid-x grid-padding-x">
+							<div class="medium-3 cell">
+								<label>Input1
+									<input type="text" placeholder="input field inside a 3 cell">
+								</label>
+							</div>
+							<div class="medium-3 cell">
+								<label>Input2
+									<input type="text" placeholder="input field inside a 3 cell">
+								</label>
+							</div>
+							<div class="medium-6 cell">
+								<label>Input3
+									<input type="text" placeholder="input field inside a 6 cell">
+								</label>
+							</div>
+						</div>
+						<p>Input labels can be inserted beside the input field or inline with the field:</p>
+						<div class="grid-x grid-padding-x">
+							<div class="small-1 cell">
+								<label for="middle-label" class="text-right middle">Input1</label>
+							  </div>
+							  <div class="small-5 cell">
+								<input type="text" id="middle-label">
+							  </div>
+							  <div class="small-6 cell">
+								<div class="input-group">
+									<span class="input-group-label float-left">%</span>
+									<input class="input-group-field" type="number">
+								</div>
+							</div>
+						</div>
+						<label> Selection Menu
+							<select>
+								<option value="one">one</option>
+								<option value="two">two</option>
+								<option value="three">three</option>
+								<option value="four">four</option>
+								<option value="five">fives</option>
+							</select>
+						</label>
+					</div>
+				<p>
+					Form elements can also be placed in a fieldset element for greater organization:
+				</p>
+					<div class="grid-container">
+						<div class="grix-x grid-padding-x">
+							<fieldset class="medium-6 cell">
+								<legend>Radio Buttons</legend>
+								<input type="radio" name="rad" value="one" id="uno"><label for="uno">One</label>
+								<input type="radio" name="rad" value="two" id="dos"><label for="dos">Two</label>
+								<input type="radio" name="rad" value="three" id="tres"><label for="tres">Three</label>
+							</fieldset>
+							<fieldset class="medium-6 cell">
+								<legend>Checkboxes</legend>
+								<input type="checkbox" id="uno"><label for="uno">One</label>
+								<input type="checkbox" id="dos"><label for="dos">Two</label>
+								<input type="checkbox" id="tres"><label for="tres">Three</label>
+							</fieldset>
+						</div>
+					</div>
+				</form>
+			<h3 id="cards">Cards</h3>
+				<p>
+					Cards are flexible UI components that display content.
 
+					Cards can either be of fixed width or automatic depending on whether or not they are placed in XY grid cells.
+				</p>
+				<div class="card" style="width: 300px;">
+					<div class="card-divider">
+					  Minecraft
+					</div>
+					<img src="https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/77/Enchanting_Table_JE4_BE2.png/revision/latest?cb=20200315175031">
+					<div class="card-section">
+					  <h4>Enchanting Table</h4>
+					  <p>An enchanting table is a block that allows players to spend their experience point levels to enchant tools, weapons, books, armor, and certain other items.</p>
+					</div>
+				  </div>
 	</body>
 </html>
