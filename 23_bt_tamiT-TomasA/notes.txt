@@ -5,7 +5,7 @@ K23 - Frameworks (Bootstrap)
 Time Spent: 4 hours
 
 # Disco
-
+ * Bootstrap is very nice and clean, with some good features and overlap Foundation like its grid structure and navbarness. It seems to be more acronym heavy and barebones though, with navbar missing some CSS and grids missing automatic row detection. Seems good for the adventerous but not for the speedy (and with Foundation you can always modify the CSS later anyways for elements you don't like).
 # QCC
  * Containers add margin to content to center it on the page.
  * Bootstrap seems to not have a lot of CSS on the nav, at least with color specification.
@@ -14,6 +14,7 @@ Time Spent: 4 hours
  * Containers are the Bootstrap equivalent of Foundation's grid-x.
 	 * cols are their cell equivalent. 12 1-width cols fit into a horizontal space. Size specifications just like cells.
 	 * Rows specify which row the cols are on. Foundation does this automagically. Bootstrap does not.
+ * Carousels require JS (not noticed because in the other group's HTML it was linked near the bottom instead of in the head)
 # Q0
  * N/A
 # Q1
