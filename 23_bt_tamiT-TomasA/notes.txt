@@ -18,3 +18,4 @@ Time Spent: 4 hours
 # Q0
  * N/A
 # Q1
+ * I would personally prefer Foundation because it has more features while still being customizable to taste. Bootstrap has a lot of features as well, but its lack of starting CSS and creature comforts like automatic grid row detection seem to be a downside of it, with little upsides to offer.
