@@ -37,7 +37,17 @@ Provisioning a Droplet (a Virtual Private Server (VPS)):
 				vi. Done!
 		g. Enter the tags you want to be associated for the droplet, along with its name.
 		f. Enable backups if you want, but remember it comes at a cost!
-		
+Installing apache2
+	1. Open your VPS console (whether through the website or through sshing)
+	2. Run ```$ sudo apt install apache2```
+	3. Wait for it to finish and answer yes to the prompt when it asks you to install.
+	4. Wait for install...
+	5. Done!
+Installing MySQL
+	1. We are using SQLite3 for this class, so we're installing that instead. Run ```$ sudo apt install sqlite3```
+Installing Python
+	1. Run ```$ sudo apt install python3```
+	2. When it is done, you are done!
 
 ### Resources
 * All resources are linked above!
