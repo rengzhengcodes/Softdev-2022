@@ -8,7 +8,7 @@ This will allow us to host web apps for softdev on the cloud.
 ### Prerequisites:
 
 - A digital ocean VPS (Droplet).
-Getting One:
+Getting Discounts + Account Setup:
 	0. The GitHub Edu Pack Discount (Optional)
 		a. Register for the [GitHub EduPack](https://education.github.com/pack) here.
 		b. Go to [here](https://education.github.com/pack/offers) and scroll down until you see DigitalOcean. There will be a link to use your offer code. Save that for now, we'll need it later.
@@ -16,41 +16,35 @@ Getting One:
 	2. Verify your identity with a credit card or PayPal.
 		a. You will NOT be charged if you use a credit/debit card.
 		b. You will be charged at least $5 if you use PayPal.
-	3. 
-
-
-1. Step blah blah blah, and/or...
-1. Step, with `inline code`, and/or...
-1. Step, with
-    ```
-    generic code block or terminal command
-    ```
-   and/or...
-    ```javascript
-    var foo = "this that JS tho";
-    ```
-   and/or...
-    ```python
-    print("this that Python tho")
-    ```
-   and/or...
-1. Step, with [hyperlink](https://xkcd.com)s...
-
+	3. Once you are registered, go to the billing tab and enter your promo code that you got from GitHub. Make sure you click apply, a popup will show up once you do it successfully (Optional).
+Provisioning a Droplet (a Virtual Private Server (VPS)):
+	4. Then go to the Droplets tab.
+		a. For distributions, choose Ubuntu 20.04 LTS x64 as that is what we use in class.
+		b. For plans, choose Shared CPU (Basic).
+		c. For CPU options, choose Regular Intel with SSD for the cheapest plan (this is good enough for our uses).
+		d. Choose the $5 plan. It comes with 1GB of RAM, 1 CPU core, 25 GB of SSD storage, and 1000 GB of outbound transfers.
+		e. Ignore the "Add block storage" section. That's for more HDD space. We do not need that.
+		f. For choose datacenter region, choose NY and one of the 3 available datacenters. We really don't care which, we just need one and NY is the closest to NYC.
+		g. Ignore the additional options. Advanced user stuff. You may want monitoring though, it doesn't cost extra.
+		f. Authentication
+			a. Don't go with password. This is a publically facing utility. If you use a password you will have it brute forced eventually. Choose SSH key.
+			b. Create a new key pair (if needed).
+				i. Open a terminal and run the command ```$ ssh-keygen```
+				ii. Save the name and key under /Users/USER/.ssh/id_rsa or another pathway. The default pathway is the above provided.
+				iii. You will then be prompted for a passphrase, if you want one. DigitalOcean highly recommends it.
+				iv. This will generate 2 files, called id_rsa and id_rsa.pub by default.
+				v. Add the public key by copy pasting the contents of the .pub file into the SSH key content field when you click new key.
+				vi. Done!
+		g. Enter the tags you want to be associated for the droplet, along with its name.
+		f. Enable backups if you want, but remember it comes at a cost!
+		
 
 ### Resources
-* thing1
-* thing2
+* All resources are linked above!
 
 ---
 
-Accurate as of (last update): 2021-mm-dd
+Accurate as of (last update): 2022-01-12
 
 #### Contributors:  
-Clyde "Thluffy" Sinclair  
-Joan of Arc, pd1  
-Buttercup, pd9  
-Blossom, pd9  
-Bubbles, pd9  
-Fake Grimlock, pd2  
-
-_Note: the two spaces after each name are important! ( <--burn after reading)  _
+Renggeng Zheng, pd 1  
