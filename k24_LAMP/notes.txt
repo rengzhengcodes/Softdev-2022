@@ -1,0 +1,2 @@
+ - There's a lot of creature comfort features that would be nice once we're out of the prototyping phase and going into the real website phase. A VPS seems to be able to handle those upgrades with minimal issue by simply moving the VPS.
+	 - It also outsources your own hardware infrastructure requirements.
