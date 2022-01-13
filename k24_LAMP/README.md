@@ -34,7 +34,8 @@ Provisioning a Droplet (a Virtual Private Server (VPS)):
 				iii. You will then be prompted for a passphrase, if you want one. DigitalOcean highly recommends it.
 				iv. This will generate 2 files, called id_rsa and id_rsa.pub by default.
 				v. Add the public key by copy pasting the contents of the .pub file into the SSH key content field when you click new key.
-				vi. Done!
+				vi. Add your own key by following the section under add your ssh private key to the ssh-agent [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+				vii. Done!
 		g. Enter the tags you want to be associated for the droplet, along with its name.
 		f. Enable backups if you want, but remember it comes at a cost!
 Installing apache2
