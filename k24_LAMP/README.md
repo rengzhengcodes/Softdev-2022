@@ -23,17 +23,17 @@ This will allow us to host web apps for softdev on the cloud for our course.
 
 ### Provisioning a Droplet (a Virtual Private Server (VPS)):
 
-4. Go to the Droplets tab.  
-	a. For distributions, choose Ubuntu 20.04 LTS x64 as that is what we use in class.  
-	b. For plans, choose Shared CPU (Basic).  
-	c. For CPU options, choose Regular Intel with SSD for the cheapest plan (this is good enough for our uses).  
-	d. Choose the $5 plan. It comes with 1GB of RAM, 1 CPU core, 25 GB of SSD storage, and 1000 GB of outbound transfers.  
-	e. Ignore the "Add block storage" section. That's for more HDD space. We do not need that.  
-	f. For choose datacenter region, choose NY and one of the 3 available datacenters. We really don't care which, we just need one and NY is the closest to NYC.  
-	g. Ignore the additional options. Advanced user stuff. You may want monitoring though, it doesn't cost extra.  
-	h. Authentication  
-		i. Don't go with password. This is a publically facing utility. If you use a password you will have it brute forced eventually. Choose SSH key.  
-		ii. Create a new key pair (if needed).  
+5. Go to the Droplets tab.  
+	1. For distributions, choose Ubuntu 20.04 LTS x64 as that is what we use in class.  
+	2. For plans, choose Shared CPU (Basic).  
+	3. For CPU options, choose Regular Intel with SSD for the cheapest plan (this is good enough for our uses).  
+	4. Choose the $5 plan. It comes with 1GB of RAM, 1 CPU core, 25 GB of SSD storage, and 1000 GB of outbound transfers.  
+	5. Ignore the "Add block storage" section. That's for more HDD space. We do not need that.  
+	6. For choose datacenter region, choose NY and one of the 3 available datacenters. We really don't care which, we just need one and NY is the closest to NYC.  
+	7. Ignore the additional options. Advanced user stuff. You may want monitoring though, it doesn't cost extra.  
+	8. Authentication  
+		1. Don't go with password. This is a publically facing utility. If you use a password you will have it brute forced eventually. Choose SSH key.  
+		2. Create a new key pair (if needed).  
 			1. Open a terminal and run the command ```$ ssh-keygen```  
 			2. Save the name and key under /Users/USER/.ssh/id_rsa or another pathway. The default pathway is the above provided.  
 			3. You will then be prompted for a passphrase, if you want one. DigitalOcean highly recommends it.  
@@ -41,8 +41,8 @@ This will allow us to host web apps for softdev on the cloud for our course.
 			5. Add the public key by copy pasting the contents of the .pub file into the SSH key content field when you click new key.  
 			6. Add your own key by following the section under add your ssh private key to the ssh-agent [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).  
 			7. Done!  
-	i. Enter the tags you want to be associated for the droplet, along with its name.  
-	j. Enable backups if you want, but remember it comes at a cost!  
+	9. Enter the tags you want to be associated for the droplet, along with its name.  
+	10. Enable backups if you want, but remember it comes at a cost!  
 
 ### Installing apache2
 
