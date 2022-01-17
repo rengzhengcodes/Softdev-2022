@@ -70,7 +70,7 @@ This will allow us to host web apps for softdev on the cloud for our course.
 	4. Follow the prompts on screen.  
 	5. Leave fields blank if you want to.  
 	6. run ```$ usermod -aG sudo username``` to add the user to the sudo list.  
-	7. use su - username to swap to the new user.  
+	7. use ```$ su - username``` to swap to the new user.  
 	8. verify you are a sudouser (instructions in the link above) and you are done!  
 15. Enabling this account's ssh login
 	1. Shoutout to [this](https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh) and Qina Liu for figuring out what took me a headscratchingly long time.  
