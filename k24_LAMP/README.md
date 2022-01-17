@@ -12,14 +12,14 @@ This will allow us to host web apps for softdev on the cloud for our course.
 
 ### Getting Discounts + Digital Ocean Account Setup:  
 
- 0. The GitHub Edu Pack Discount (Optional)  
-    a. Register for the [GitHub EduPack](https://education.github.com/pack) here.  
-    b. Go to [here](https://education.github.com/pack/offers) and scroll down until you see DigitalOcean. There will be a link to use your offer code. Save that for now, we'll need it later.  
- 1. Create a DigitalOcean account tied to your GitHub [here](https://cloud.digitalocean.com/registrations/new).
- 2. Verify your identity with a credit card or PayPal.  
-    a. You will NOT be charged if you use a credit/debit card.  
-    b. You will be charged at least $5 if you use PayPal.  
- 3. Once you are registered, go to the billing tab and enter your promo code that you got from GitHub. Make sure you click apply, a popup will show up once you do it successfully (Optional).  
+1. The GitHub Edu Pack Discount (Optional)  
+	1. Register for the [GitHub EduPack](https://education.github.com/pack) here.  
+	2. Go to [here](https://education.github.com/pack/offers) and scroll down until you see DigitalOcean. There will be a link to use your offer code. Save that for now, we'll need it later.  
+2. Create a DigitalOcean account tied to your GitHub [here](https://cloud.digitalocean.com/registrations/new).
+3. Verify your identity with a credit card or PayPal.  
+	1. You will NOT be charged if you use a credit/debit card.  
+	2. You will be charged at least $5 if you use PayPal.  
+4. Once you are registered, go to the billing tab and enter your promo code that you got from GitHub. Make sure you click apply, a popup will show up once you do it successfully (Optional).  
 
 ### Provisioning a Droplet (a Virtual Private Server (VPS)):
 
