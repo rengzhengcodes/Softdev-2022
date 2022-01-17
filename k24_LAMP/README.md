@@ -50,6 +50,46 @@ Installing Python
 	1. Run ```$ sudo apt install python3```
 	2. When it is done, you are done!
 
+### Securing the Boat
+1. Create a sudo user so not everyone has root access
+	a. Our Source: [https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart](https://www.digitalocean.com/community/tutorials/how-to-create-a-sudo-user-on-ubuntu-quickstart)
+	b. run ```$ adduser username```
+	c. Enter your desired password.
+	d. Follow the prompts on screen.
+	e. Leave fields blank if you want to.
+	f. run ```$ usermod -aG sudo username``` to add the user to the sudo list.
+	g. use su - username to swap to the new user.
+	f. verify you are a sudouser (instructions in the link above) and you are done!
+2. Enabling this account's ssh login
+	a. Shoutout to [this](https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh) and Qina Liu for figuring out what took me a headscratchingly long time.
+	b. Make sure you have root/su perms.
+	c. ```$ sudo nano /etc/ssh/sshd_config```
+	d. Find "PasswordAuthentication" and change it from no to yes.
+	e. Save and exit.
+	f. Run ```$ sudo service sshd reload``` for the new changes to take effect.
+	g. Go to the console on your local machine.
+	h. Run ```$ ssh-copy-id username@dropletip```
+	i. Enter your password. Tada.
+	j. Repeat steps c through f except turn PasswordAuthentication back off.
+2. Disabling root login
+	a. Source: [https://www.digitalocean.com/community/questions/how-can-i-disable-ssh-login-for-a-root-user-i-am-the-account-owner](https://www.digitalocean.com/community/questions/how-can-i-disable-ssh-login-for-a-root-user-i-am-the-account-owner)
+	b. Run ```$ sudo nano /etc/ssh/sshd_config```
+	c. set "PermitRootLogin" to "no"
+	d. Save
+	e. Run ```$ sudo service ssh restart```
+
+### Adding a Domain
+1. Get a domain registered
+	a. Many fancy websites do this, from [Google](https://domains.google/), Mykolyk-certified and Stuyvesant preferred [NameCheap](https://www.namecheap.com/), to the ones that come with your GitHub edupack (tech.com, namecheap, and name.com).
+		 i. They all have separate application processes with their own documentation, so that's not included here.
+	b. Get the digitalocean name servers set up. They have documentation [here](https://docs.digitalocean.com/products/networking/dns/quickstart/)
+		i. The gist though is you want to add your domain through the networking tab in digitalocean.
+		ii. This tells digital ocean servers, "hey, guys this is the new domain. whenever someone asks for it, you, the name server, give them the IP address associated"
+		iii. Then you go to your domain registrar and follow these [general instructions](https://www.digitalocean.com/community/tutorials/how-to-point-to-digitalocean-nameservers-from-common-domain-registrars). Basically, you're telling your registrar "we don't need your name servers anymore, our vps provider does that for us. Tell ICANN (the domain registration people) that whenever a DNS server receives a request for this url, point them to the digital ocean guys for resolution"
+		iv. Wait for all of this to propogate (should take about an hour)
+		v. Test (whether through pinging or seeing if the ICANN whois registration has properly updated the nameservers [here](https://lookup.icann.org/lookup))
+		vi. Done!
+
 ### Resources
 * All resources are linked above!
 
