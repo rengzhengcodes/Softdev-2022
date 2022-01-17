@@ -3,3 +3,4 @@
  - Domain registration is pretty painless and well documented, even for the non-recommended name.com (have not tried out namecheap yet).
  - SSH documentation is absolutely dreadful. Took forever to figure out that public keys are not automatically cross copied. This makes a lot of sense, but the documentation to get another person set up with a ssh key does not. It also feels like it throws best practice caution to the wind. Like really? You want to expose the password side publically? That seems like a huge security vulnerability if I've ever seen one. There must be a better way to do this but I have yet to find it but should do so before I escape the hobbyist space and enter the professional one.
  - Destroying the droplet and restarting based on your own instructions is very good validation tool.
+ - Digitalocean documentation is very good. Stuyvesant alumni giving back!
