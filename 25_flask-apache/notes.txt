@@ -1,0 +1,5 @@
+ - If apache works when you enter the IP address/url into a browser, you should get a page served with " Apache2 Ubuntu Default Page " as the header.
+ - If it tells you to restart when you ssh in, restart I guess.
+ - Resources: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
+ - Deviances: installed python3-pip
+ - if you use sudo, it does not install it in the venv, it installs it for all python.
