@@ -3,3 +3,27 @@
  - Resources: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-flask-application-on-an-ubuntu-vps
  - Deviances: installed python3-pip
  - if you use sudo, it does not install it in the venv, it installs it for all python.
+ - put app.run() inside a conditional to not have runaway processes
+---
+www-data
+[_] _ _ _|_ _ _|_ _ _
+permissions (1st to see if if its a directory)
+left to right:
+users, group, world
+sub groups:
+read, write, execute (rwx)
+
+ls -al #permissions
+chmod 770 file #user, group all permissions, everyone not
+chmod tx #all execute
+
+we want usually 755 for webhosting.
+
+www-data is how apache shows up in the users list.
+ - owner of the process of a machine
+ - top #shows processes
+ - q #quits top
+ - If you see a user associated with a process and its www-data, it's apache
+ - if you want to give apache ownership of a file, chown it to apache
+	 - chown www-data file # change from www-data to file
+	 - chgrp www-data file # change from www-data to group

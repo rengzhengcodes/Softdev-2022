@@ -47,7 +47,7 @@ We code most of our stuff in Flask in this class, as its relatively easy to work
    app = Flask(__name__)
    @app.route("/")
    def hello():
-   	return "Hello, I hate Digital Ocean!"
+   	return "Hello, I love Digital Ocean!"
    if __name__ == "__main__": #this seems like a deviation from Cliu's that's important
    	app.run()
    ```
