@@ -27,3 +27,6 @@ www-data is how apache shows up in the users list.
  - if you want to give apache ownership of a file, chown it to apache
 	 - chown www-data file # change from www-data to file
 	 - chgrp www-data file # change from www-data to group
+ - www-data needs to own both the directory and the db file to write to it.
+ - you need to specify the db abs. path as www-data does not use the same rel path as __init__.py
+ - changing the first slash on "WSGIScriptAlias / /var/www/FlaskApp/flaskapp.wsgi" puts the WSGI path on a specific subdirectory.
