@@ -21,3 +21,6 @@ Javascript:
 	- Named javascript because they wanted it to catch on
 		- CollegeBoard used Scheme before Java
 	- Javascript - performs like scheme with java syntax
+	- Uses semicolons
+	- Variables are untyped
+	- let, const, and var all do different things
