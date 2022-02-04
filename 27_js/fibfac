@@ -1,4 +1,9 @@
 #lang racket
+; Renggeng Zheng
+; SoftDev
+; K27 -- Scheme, Javascript, and functional programming
+; 2022-02-04
+; time spent: 30 min
 (define fib
   (lambda (n)
     (if (= n 0) 0 (+ n (fib(- n 1)))
