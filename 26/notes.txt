@@ -1,0 +1,23 @@
+
+2nd Semester Topics:
+JSS + HTML5 + Canvas
+SVG
+NoSQL - alternative to nonrelational databases (document databases)
+New way of dealing with data
+TEDx SoftDev - TED by the class
+	- One of the class comes in and teaches 
+ToDo:
+	- Decorators
+	- Closures
+	- Memoization
+	- D3
+
+Javascript:
+	- not related to java
+	- was modelled after scheme, wanted that clientside
+	- Java was the rage
+	- Somebody decided to copy Java
+	- Java sounded cool (since coffee wasn't known)
+	- Named javascript because they wanted it to catch on
+		- CollegeBoard used Scheme before Java
+	- Javascript - performs like scheme with java syntax
