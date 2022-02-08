@@ -114,5 +114,5 @@ function gcd(x, y, num) {
 }
 
 function gcd(x, y) {
-	return gcd(x, y, Math.max(x, y))
+	return gcd(x, y, Math.min(x, y))
 }
