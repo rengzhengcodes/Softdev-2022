@@ -103,16 +103,16 @@ function fact(n) {
 	}
 }
 // GCD
-function gcd(x, y, num) {
-	if (x == 0 || y == 0) {
+function greatest_common_denominator(x, y, num) {
+	if (x==0 || y==0) {
 		return null;
-	} else if (x % num == 0 && y % num == 0) {
+	} else if (x%num==0 && y%num==0) {
 		return num;
 	} else {
-		return gcd(x, y, num - 1);
+		return greatest_common_denominator(x, y, num - 1);
 	}
 }
 
 function gcd(x, y) {
-	return gcd(x, y, Math.min(x, y));
+	return greatest_common_denominator(x, y, Math.min(x, y));
 }
