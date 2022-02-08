@@ -1,0 +1,21 @@
+DOM = Document Object Model
+Environment - awareness of its environment (context it runs in)
+A path in windows - directory name
+The PATH in windows - path where all the executables are
+	- one of the environments you load/shell
+	- sequence of strings where executables live
+	- when you run a shell command, it looks for the corresponding executable for a command
+A program is aware of the environment its lying in
+Where does Javascript live?
+	- browser (sans node.js)
+DOM = tree representation of a web page
+	- names you can refer to in your JS code to do changes
+JS
+	- dynamically typed
+	- first-class fxns - fxns can be passed to other functions (can be treated like vars)
+	- obj-oriented
+	- imperative/scripting
+	- functional language
+	- Classical limitations:
+		- no I/O (networking, storage, graphics)
+	- auto semicolon
