@@ -109,10 +109,10 @@ function gcd(x, y, num) {
 	} else if (x % num == 0 && y % num == 0) {
 		return num;
 	} else {
-		return gcd(x, y, num - 1)
+		return gcd(x, y, num - 1);
 	}
 }
 
 function gcd(x, y) {
-	return gcd(x, y, Math.min(x, y))
+	return gcd(x, y, Math.min(x, y));
 }
