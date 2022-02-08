@@ -52,30 +52,31 @@ var o = { 'name' : 'Thluffy',
 
 
 var addItem = function(text) {
-	var list = document.getElementById("thelist");
-	var newitem = document.createElement("li");
-	newitem.innerHTML = text;
-	list.appendChild(newitem);
+	var list = document.getElementById("thelist"); //gets the list
+	var newitem = document.createElement("li"); //creates a new li element
+	newitem.innerHTML = text; //sets the text to the new element to the text given
+	list.appendChild(newitem); // adds the li element tot he list
 };
 
 
 var removeItem = function(n) {
-	var listitems = document.getElementsByTagName('li');
-	listitems[n].remove();
+	var listitems = document.getElementsByTagName('li'); //gets all li elements
+	listitems[n].remove(); //removes the nth li element
+	//doesn't this do all li elements instead of the elements in a specific list?
 };
 
 
 var red = function() {
 	var items = document.getElementsByTagName("li");
 	for(var i = 0; i < items.length; i++) {
-		items[i].classList.add('red');
+		items[i].classList.add('red'); //gives all li's the red class tag
 	}
 };
 
 
 var stripe = function() {
 	var items = document.getElementsByTagName("li");
-	for(var i = 0; i < items.length; i++) {
+	for(var i = 0; i < items.length; i++) { //gives alternating red and blue tags to li elements
 		if (i%2==0){
 			items[i].classList.add('red');
 		} else {
