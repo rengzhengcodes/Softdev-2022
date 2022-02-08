@@ -87,5 +87,32 @@ var stripe = function() {
 
 //insert your implementations here for...
 // FIB
+function fib(n) {
+	if (n == 1) {
+		return 1;
+	} else {
+		return n + fib(n-1);
+	}
+}
 // FAC
+function fact(n) {
+	if (n <= 1) {
+		return 1;
+	} else {
+		return n * fact(n-1);
+	}
+}
 // GCD
+function gcd(x, y, num) {
+	if (x == 0 || y == 0) {
+		return null;
+	} else if (x % num == 0 && y % num == 0) {
+		return num;
+	} else {
+		return gcd(x, y, num - 1)
+	}
+}
+
+function gcd(x, y) {
+	return gcd(x, y, Math.max(x, y))
+}
