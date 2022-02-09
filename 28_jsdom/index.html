@@ -23,11 +23,22 @@
 
 	<body>
 		<h1 id="h" class="blue">Hello World!</h1>
-		<h2 class="blue"> fib(5) =
-			<script>document.write(fib(5))</script>
+		<script>
+			function fibo() {
+				let val = document.getElementById("fib").value;
+				document.getElementById("fib_text").innerText = fib(parseInt(val)); //let not const because if const all of JS can't change it
+			}
+		</script>
+		<h2 class="blue"> fib(<input type="number" id = "fib" oninput = "fibo()">) = <p id = "fib_text"></p>
 		</h2>
-		<h2 class="green"> fact(5) =
-			<script>document.write(fact(5))</script>
+		<script>
+			function facto() {
+				let val = document.getElementById("fac").value;
+				document.getElementById("fact_text").innerText = fact(parseInt(val)); //let not const because if const all of JS can't change it
+			}
+		</script>
+		<h2 class="green"> fact(<input type="number" id = "fac" oninput = "facto()">) =
+			<p id="fact_text"></p>
 		</h2>
 		<h2 class="red"> gcd(96, 60) =
 			<script>document.write(gcd(96, 60))</script>
