@@ -22,32 +22,61 @@
 	</head>
 
 	<body>
-		<h1 id="h" class="blue">Hello World!</h1>
-		<script>
-			function fibo() {
-				let val = document.getElementById("fib").value;
-				document.getElementById("fib_text").innerText = fib(parseInt(val)); //let not const because if const all of JS can't change it
-			}
-		</script>
-		<h2 class="blue"> fib(<input type="number" id = "fib" oninput = "fibo()">) = <p id = "fib_text"></p>
-		</h2>
-		<script>
-			function facto() {
-				let val = document.getElementById("fac").value;
-				document.getElementById("fact_text").innerText = fact(parseInt(val)); //let not const because if const all of JS can't change it
-			}
-		</script>
-		<h2 class="green"> fact(<input type="number" id = "fac" oninput = "facto()">) =
-			<p id="fact_text"></p>
-		</h2>
-		<script>
-			function gcdo() {
-				let val1 = document.getElementById("gcd1").value;
-				let val2 = document.getElementById("gcd2").value;
-				document.getElementById("gcd_text").innerText = gcd(parseInt(val1), parseInt(val2)); //let not const because if const all of JS can't change it
-			}
-		</script>
-		<h2 class="red"> gcd(<input type="number" id="gcd1" oninput="gcdo()">, <input type="number" id="gcd2" oninput="gcdo()">) =
-			<p id="gcd_text"></p>
+		<h1 id="h" class="blue">Function on Input</h1>
+			<script>
+				function fibo() {
+					let val = document.getElementById("fib").value;
+					document.getElementById("fib_text").innerText = fib(parseInt(val)); //let not const because if const all of JS can't change it
+				}
+			</script>
+			<h2 class="blue"> fib(<input type="number" id = "fib" oninput = "fibo()">) = <p id = "fib_text"></p>
+			</h2>
+			<script>
+				function facto() {
+					let val = document.getElementById("fac").value;
+					document.getElementById("fact_text").innerText = fact(parseInt(val)); //let not const because if const all of JS can't change it
+				}
+			</script>
+			<h2 class="green"> fact(<input type="number" id = "fac" oninput = "facto()">) =
+				<p id="fact_text"></p>
+			</h2>
+			<script>
+				function gcdo() {
+					let val1 = document.getElementById("gcd1").value;
+					let val2 = document.getElementById("gcd2").value;
+					document.getElementById("gcd_text").innerText = gcd(parseInt(val1), parseInt(val2)); //let not const because if const all of JS can't change it
+				}
+			</script>
+			<h2 class="red"> gcd(<input type="number" id="gcd1" oninput="gcdo()">, <input type="number" id="gcd2" oninput="gcdo()">) =
+				<p id="gcd_text"></p>
+
+		<h1>Function on Button</h1>
+			<script>
+				function fib_on_click() {
+					let val = parseInt(document.getElementById("fib_on_button").value);
+					document.getElementById("fib_on_button_text").innerText = fib(val);
+				}
+			</script>
+			<h2 class="blue">fib(<input type="number" id="fib_on_button">) = <p id="fib_on_button_text"></p>
+			<button type="button" onclick="fib_on_click()">fib</button>
+
+			<script>
+				function fact_on_click() {
+					let val = parseInt(document.getElementById("fact_on_button").value);
+					document.getElementById("fact_on_button_text").innerText = fact(val);
+				}
+			</script>
+			<h2 class="green">fac(<input type="number" id="fact_on_button">) = <p id="fact_on_button_text"></p>
+			<button type="button" onclick="fact_on_click()">fac</button>
+
+			<script>
+				function gcd_on_click() {
+					let val1 = parseInt(document.getElementById("gcd_on_button1").value);
+					let val2 = parseInt(document.getElementById("gcd_on_button2").value);
+					document.getElementById("gcd_on_button_text").innerText = gcd(val1, val2);
+				}
+			</script>
+			<h2 class="red">gcd(<input type="number" id="gcd_on_button1">, <input type="number" id="gcd_on_button2">) = <p id="gcd_on_button_text"></p>
+			<button type="button" onclick="gcd_on_click()">gcd</button>
 	</body>
 </html>
