@@ -40,24 +40,14 @@
 		<h2 class="green"> fact(<input type="number" id = "fac" oninput = "facto()">) =
 			<p id="fact_text"></p>
 		</h2>
-		<h2 class="red"> gcd(96, 60) =
-			<script>document.write(gcd(96, 60))</script>
-		</h2>
-
-		<div id="div1" class="green">This is a div</div>
-		<div id="div2">This is a second div</div>
-		<div class="blue">This is a toid div</div>
-
-		<ol id="thelist">
-			<li class="">item 0</li>
-			<li class="green blue">item 1</li>
-			<li class="green blue">item 2</li>
-			<li class="red green blue">item 3</li>
-			<li class="red green blue">item 4</li>
-			<li class="green blue">item 5</li>
-			<li class="green blue">item 6</li>
-			<li class="">item 7</li>
-		</ol>
-
+		<script>
+			function gcdo() {
+				let val1 = document.getElementById("gcd1").value;
+				let val2 = document.getElementById("gcd2").value;
+				document.getElementById("gcd_text").innerText = gcd(parseInt(val1), parseInt(val2)); //let not const because if const all of JS can't change it
+			}
+		</script>
+		<h2 class="red"> gcd(<input type="number" id="gcd1" oninput="gcdo()">, <input type="number" id="gcd2" oninput="gcdo()">) =
+			<p id="gcd_text"></p>
 	</body>
 </html>
