@@ -34,6 +34,8 @@ var drawCircle = (e) => {
 	console.log("mouseclick registered at ", mouseX, mouseY);
 	ctx.beginPath();
 	ctx.arc(mouseX, mouseY, 50, 2 * Math.PI, false);
+	ctx.fillStyle = '#00ff00';
+	ctx.fill();
 	ctx.stroke();
 }
 
