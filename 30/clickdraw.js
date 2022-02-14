@@ -34,16 +34,21 @@ var drawCircle = (e) => {
 
 //var draw = function(e) {
 var draw = (e) => {
-
+	if (mode === "rect") {
+		drawRect();
+	} else {
+		drawCircle();
+	}
 }
 
 //var wipeCanvas = function() {
 var wipeCanvas = () => {
-
+	console.log("wiping canvas...");
+	ctx.clearRect();
 }
 
 c.addEventListener("click", draw);
 var bToggler = document.getElementById("buttonToggle");
 bToggler.addEventListener("click", toggleMode);
-var clearB = document.getElementbyId("buttonClear");
+var clearB = document.getElementById("buttonClear");
 clearB.addEventListener("click", wipeCanvas);
