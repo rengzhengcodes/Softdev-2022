@@ -35,9 +35,9 @@ var drawCircle = (e) => {
 //var draw = function(e) {
 var draw = (e) => {
 	if (mode === "rect") {
-		drawRect();
+		drawRect(e);
 	} else {
-		drawCircle();
+		drawCircle(e);
 	}
 }
 
