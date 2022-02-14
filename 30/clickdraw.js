@@ -21,7 +21,7 @@ var drawRect = function(e) {
 	var mouseY = e.offsetY;
 	console.log("mouseclick registered at ", mouseX, mouseY);
 	ctx.beginPath();
-	ctx.rect(mouseX, mouseY, mouseX + 200, mouseY + 200);
+	ctx.rect(mouseX, mouseY, 200, 200);
 	ctx.fillStyle = '#ff0000';
 	ctx.fill();
 	ctx.stroke();
