@@ -17,11 +17,11 @@ var toggleMode = (e) => {
 }
 
 var drawRect = function(e) {
-	var mouseX = e.clientX;
-	var mouseY = e.clientY;
+	var mouseX = e.offsetX; //ofset vs client X gives position relative to element. https://stackoverflow.com/questions/6645951/what-is-the-difference-between-offsetx-offsety-and-pagex-pagey
+	var mouseY = e.offsetY;
 	console.log("mouseclick registered at ", mouseX, mouseY);
 	ctx.beginPath();
-	ctx.rect(5, 5, 200, 200);
+	ctx.rect(mouseX, mouseY, mouseX + 200, mouseY + 200);
 	ctx.stroke();
 }
 
