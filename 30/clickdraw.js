@@ -27,9 +27,12 @@ var drawRect = function(e) {
 
 //var drawCircle = function(e) {
 var drawCircle = (e) => {
-
+	var mouseX = e.offsetX;
+	var mouseY = e.offsetY;
 	console.log("mouseclick registered at ", mouseX, mouseY);
-
+	ctx.beginPath();
+	ctx.arc(mouseX, mouseY, 50, 2 * Math.PI, false);
+	ctx.stroke();
 }
 
 //var draw = function(e) {
