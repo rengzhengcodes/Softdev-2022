@@ -22,8 +22,8 @@ var drawRect = function(e) {
 	console.log("mouseclick registered at ", mouseX, mouseY);
 	ctx.beginPath();
 	ctx.rect(mouseX, mouseY, 200, 200);
-	ctx.fillStyle = '#ff0000';
-	ctx.fill();
+	ctx.fillStyle = '#ff0000'; // color of fill
+	ctx.fill(); // fill the shape
 	ctx.stroke();
 }
 
@@ -56,6 +56,6 @@ var wipeCanvas = () => {
 
 c.addEventListener("click", draw);
 var bToggler = document.getElementById("buttonToggle");
-bToggler.addEventListener("click", toggleMode);
+bToggler.addEventListener("click", toggleMode);//adds fxn on press
 var clearB = document.getElementById("buttonClear");
-clearB.addEventListener("click", wipeCanvas);
+clearB.addEventListener("click", wipeCanvas); //adds fxn on press
