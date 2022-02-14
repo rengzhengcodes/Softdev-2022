@@ -44,7 +44,7 @@ var draw = (e) => {
 //var wipeCanvas = function() {
 var wipeCanvas = () => {
 	console.log("wiping canvas...");
-	ctx.clearRect(0, 0, slate.width, slate.height);
+	ctx.clearRect(0, 0, slate.width, slate.height); //relative to the canvas
 }
 
 c.addEventListener("click", draw);
