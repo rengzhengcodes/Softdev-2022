@@ -1,0 +1,2 @@
+ - theere are less efficient JS methods than the one on the sheet we got
+	
