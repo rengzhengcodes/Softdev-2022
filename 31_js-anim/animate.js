@@ -38,13 +38,24 @@ var growing = true;
 var drawDot = () => {
 	console.log("drawDot invoked...")
 	// YOUR CODE HERE
-	clear(e);
+	clear(event);
 	//repaint circle
 	ctx.beginPath();
 	ctx.arc(c.width/2, c.height/2, radius, 2 * Math.PI, false);
 	ctx.fill();
 	ctx.stroke();
-	requestID = window.requestAnimationFrame();
+	//growing/ shrinking
+	if (growing) {
+		radius += 1;
+	} else {
+		radius -= 1;
+	}
+	//growing and shrinking behavior
+	if (radius <= 0) {
+		growing = true;
+	} else if (radius >= c.height/2 ) {
+		growing = false;
+	}
 	/*
 		...to
 		Wipe the canvas,
