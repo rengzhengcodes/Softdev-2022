@@ -56,7 +56,7 @@ var drawDot = () => {
 	} else if (radius >= c.height/2 ) {
 		growing = false;
 	}
-	window.requestAnimationFrame(drawDot); //tells it this is the function doing the animating, and to continue doing this function to continue the animation
+	requestID = window.requestAnimationFrame(drawDot); //tells it this is the function doing the animating, and to continue doing this function to continue the animation
 	/*
 		...to
 		Wipe the canvas,
@@ -76,7 +76,7 @@ var drawDot = () => {
 var stopIt = () => {
 	console.log("stopIt invoked...")
 	console.log( requestID );
-	window.cancelAnimationFrame();
+	window.cancelAnimationFrame(requestID);
 	// YOUR CODE HERE
 	/*
 		...to
