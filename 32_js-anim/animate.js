@@ -12,7 +12,7 @@
 var c = document.getElementById("playground");// GET CANVAS
 var dotButton = document.getElementById("buttonCircle");// GET DOT BUTTON
 var stopButton = document.getElementById("buttonStop");// GET STOP BUTTON
-
+var dvdButton = document.getElementById("dvd");
 //prepare to interact with canvas in 2D
 var ctx = c.getContext("2d");// YOUR CODE HERE
 
@@ -86,6 +86,19 @@ var stopIt = () => {
 	*/
 };
 
+let img = new Image(60, 40);
+img.src = "logo_dvd.jpg";
+let x = 250;
+let y = 250;
+
+let dvd = () => {
+	console.log("screensaving");
+	requestID = window.cancelAnimationFrame(requestID);
+	//clear();
+	ctx.beginPath();
+	ctx.drawImage(img, x, y, img.width, img.height);
+	requestID = window.requestAnimationFrame(dvd);
+}
 
 dotButton.addEventListener( "click",
 function beginDraw() {
@@ -95,3 +108,4 @@ function beginDraw() {
 }
 );
 stopButton.addEventListener( "click",	stopIt );
+dvdButton.addEventListener( "click", dvd );
