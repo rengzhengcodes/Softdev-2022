@@ -89,8 +89,8 @@ var stopIt = () => {
 
 let img = new Image(60, 40);
 img.src = "logo_dvd.jpg";
-let x = Math.floor(Math.random() * (c.width - img.width));
-let y = Math.floor(Math.random() * (c.height - img.height));
+var x = Math.floor(Math.random() * (c.width - img.width));
+var y = Math.floor(Math.random() * (c.height - img.height));
 
 let xVelo = -1;
 let yVelo = Math.PI;
@@ -120,7 +120,7 @@ dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",	stopIt );
 dvdButton.addEventListener( "click",
 function dvdSaver() {
-	let x = Math.floor(Math.random() * (c.width - img.width));
-	let y = Math.floor(Math.random() * (c.height - img.height));
+	x = Math.floor(Math.random() * (c.width - img.width));
+	y = Math.floor(Math.random() * (c.height - img.height));
 	dvd();
 });
