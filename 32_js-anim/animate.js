@@ -91,12 +91,27 @@ img.src = "logo_dvd.jpg";
 let x = 250;
 let y = 250;
 
+let xVelo = -1;
+let yVelo = Math.PI;
+
 let dvd = () => {
 	console.log("screensaving");
 	requestID = window.cancelAnimationFrame(requestID);
 	//clear();
 	ctx.beginPath();
 	ctx.drawImage(img, x, y, img.width, img.height);
+
+	if (x <= 0 || x >= c.width) {
+		xVelo = -1 * xVelo;
+	}
+
+	if (y <= 0 || y >= c.height) {
+		yVelo = -1 * yVelo;
+	}
+
+	x += xVelo;
+	y += yVelo;
+	
 	requestID = window.requestAnimationFrame(dvd);
 }
 
