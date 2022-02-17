@@ -97,21 +97,21 @@ let yVelo = Math.PI;
 let dvd = () => {
 	console.log("screensaving");
 	requestID = window.cancelAnimationFrame(requestID);
-	//clear();
+	clear();
 	ctx.beginPath();
 	ctx.drawImage(img, x, y, img.width, img.height);
 
-	if (x <= 0 || x >= c.width) {
+	if (x <= 0 || x >= c.width - img.width) {
 		xVelo = -1 * xVelo;
 	}
 
-	if (y <= 0 || y >= c.height) {
+	if (y <= 0 || y >= c.height - img.height) {
 		yVelo = -1 * yVelo;
 	}
 
 	x += xVelo;
 	y += yVelo;
-	
+
 	requestID = window.requestAnimationFrame(dvd);
 }
 
