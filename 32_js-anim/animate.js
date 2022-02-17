@@ -89,8 +89,8 @@ var stopIt = () => {
 
 let img = new Image(60, 40);
 img.src = "logo_dvd.jpg";
-var x = Math.floor(Math.random() * (c.width - img.width));
-var y = Math.floor(Math.random() * (c.height - img.height));
+let x = Math.floor(Math.random() * (c.width - img.width));
+let y = Math.floor(Math.random() * (c.height - img.height));
 
 let xVelo = -1;
 let yVelo = Math.PI;
