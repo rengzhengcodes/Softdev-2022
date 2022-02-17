@@ -1,4 +1,4 @@
-// Christopher Liu, Renggeng Zheng
+// You Can Pick - Christopher Liu, Renggeng Zheng
 // SoftDev pd1
 // K32 -- DVD Screensaver
 // 2022-02-17r
