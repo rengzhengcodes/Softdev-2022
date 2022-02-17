@@ -37,6 +37,7 @@ var growing = true;
 var drawDot = () => {
 	console.log("drawDot invoked...")
 	// YOUR CODE HERE
+	window.cancelAnimationFrame(requestID);
 	clear(event);
 	//repaint circle
 	ctx.beginPath();
@@ -88,8 +89,8 @@ var stopIt = () => {
 
 let img = new Image(60, 40);
 img.src = "logo_dvd.jpg";
-let x = 250;
-let y = 250;
+let x = Math.floor(Math.random() * (c.width - img.width));
+let y = Math.floor(Math.random() * (c.height - img.height));
 
 let xVelo = -1;
 let yVelo = Math.PI;
@@ -115,12 +116,11 @@ let dvd = () => {
 	requestID = window.requestAnimationFrame(dvd);
 }
 
-dotButton.addEventListener( "click",
-function beginDraw() {
-	if (requestID === undefined) {
-		drawDot();
-	}
-}
-);
+dotButton.addEventListener( "click", drawDot );
 stopButton.addEventListener( "click",	stopIt );
-dvdButton.addEventListener( "click", dvd );
+dvdButton.addEventListener( "click",
+function dvdSaver() {
+	let x = Math.floor(Math.random() * (c.width - img.width));
+	let y = Math.floor(Math.random() * (c.height - img.height));
+	dvd();
+});
