@@ -88,7 +88,7 @@ var stopIt = () => {
 };
 
 let img = new Image(60, 40);
-img.src = "logo_dvd.jpg";
+img.src = "logo_dvd_change.png";
 let x = Math.floor(Math.random() * (c.width - img.width));
 let y = Math.floor(Math.random() * (c.height - img.height));
 
