@@ -95,19 +95,27 @@ let y = Math.floor(Math.random() * (c.height - img.height));
 let xVelo = -1;
 let yVelo = Math.PI;
 
+let hue = 90;
+
 let dvd = () => {
 	console.log("screensaving");
 	requestID = window.cancelAnimationFrame(requestID);
 	clear();
 	ctx.beginPath();
+	ctx.filter = `invert() saturate(50%) hue-rotate(${hue}deg)`;
 	ctx.drawImage(img, x, y, img.width, img.height);
+	ctx.filter = "none"; // so it doesn't affect other stuff
 
 	if (x <= 0 || x >= c.width - img.width) {
 		xVelo = -1 * xVelo;
+		hue += 45;
+		hue %= 360;
 	}
 
 	if (y <= 0 || y >= c.height - img.height) {
 		yVelo = -1 * yVelo;
+		hue += 45;
+		hue %= 360;
 	}
 
 	x += xVelo;
