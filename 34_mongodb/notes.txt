@@ -1,0 +1,11 @@
+Tabular data model -- you have to start off with your schema for data, and then you have to work around that and you need to go for suboptimal workarounds or costly restructures.
+MongoDB -- data flow dictated by data
+	- Easier to improve/change data model
+There has to be a cost performance lost though, right? Why else would SQL still exist?
+Relationships -- how data is connected to each other
+	- I see why Mongo is becoming more popular though, as baking node relationships into the datastructure allows systems to build more explicit relationships
+I like how they addressed migrating schemas, because it gets rid of my concern of spaghetti code.
+Bucket pattern -- it seems like OOP where things get amelierated into one item
+Saving index size -- but wouldn't that decrease speed? Why does it increase speed?
+	- I'm guessing it's using a hash rather than index system on the backend so it's still constant speed?
+It seems like this solves the issue I had with sqlite of wanting to add more columns and making non-rectangular tables.
