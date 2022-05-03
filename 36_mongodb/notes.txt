@@ -1,0 +1,26 @@
+Documents -- are stored BSON, viewed in JSON
+  - keys == fields
+  - Subdocument -- document in document
+  - JSON - space-consuming, readable, time consuming, and has limited types. In memory it's BSON (binary JSON)
+      - BSON also stores more types
+BSON if you don't want to view, JSON if you want to
+mongodump exports as BSON.
+mongoexport exports as JSON.
+mongorestore imports BSON.
+mongoimport imports from JSON.
+```--drop``` drops the table.
+
+Can interact with data:
+  - Atlas UI to view everything in collections
+  - Has a search feature + filters
+  - format is collection.document
+
+Find Command:
+  - Shell equivalent of the UI
+  - use db to go to db
+  - show collections to find the collections available
+  - db.collection_name.find(query) is the find command
+  - it = iterate through the db cursor
+  - .count() = number of queries returned
+  - .pretty() = format data
+  
