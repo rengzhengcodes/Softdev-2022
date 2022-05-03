@@ -1,0 +1,9 @@
+MongoDB - DB so it organizes data. Does so without tables, rows, and columns.
+	- Instead uses field-value pairs.
+Collections - a binder of documents
+Documents - field value pairs
+Atlas - Database in the cloud
+	- replica set -- set of machines with the same data
+	- instance -- a machine
+	- cluster -- groups of servers storing your data
+  
