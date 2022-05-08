@@ -46,4 +46,7 @@
     1. You can have an object (document) field, or an array field.
       1. Including objects in arrays
     2. Looking at a doc, in the top right there's options to edit, copy, clone, or delete.
-    3. 
+    3. Click edit. It's just like creating the document in the first place.
+    4. If you click add a new element, you have the choice of where to add/nest it, if it's on the same line as a nestable item.
+    5. Remember, maintain consistency.
+    6. Hit update to update.
