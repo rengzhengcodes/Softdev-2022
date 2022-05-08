@@ -33,3 +33,6 @@
         2. If we query everything with the fields we entered (it was dupe), they all look alike except for _id
         3. _id will be autoassigned, with a unique ObjectId object.
         4. There's also ways to prevent dupe data insertion with MongoDB outside of IDs.
+  3. Inserting Multiple Documents
+    1. You do so via an array as the input, with documents as items in the array.
+    
