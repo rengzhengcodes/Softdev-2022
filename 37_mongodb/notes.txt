@@ -35,4 +35,10 @@
         4. There's also ways to prevent dupe data insertion with MongoDB outside of IDs.
   3. Inserting Multiple Documents
     1. You do so via an array as the input, with documents as items in the array.
+    2. If they don't have IDs, and there's no dupe value prevention, dupe values will be inserted.
+    3. If they do have IDs, the default behavior is to insert until an error is thrown, then stop inserting.
+    4. If you add a second parameter, {"ordered":false} to the insert command, it inserts all documents that don't have dupe IDs, and any documents with dupe IDs don't get inserted.
+      1. If a document is inserted in order, the first with an ID is inserted, the second is not and the process stops.
+    5. If a collection doesn't exist on insertion, it is created.
+    6. If a db doesn't exist, it can be created using the "use name_of_db" command. If no collection is added to it, it will not be saved to the Atlas cluster.
     
