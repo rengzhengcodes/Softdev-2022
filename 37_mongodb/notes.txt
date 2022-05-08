@@ -13,4 +13,23 @@
     5. Good practice to keep records relatively consistent.
     6. Use mouse to move from field to value + add new fields. You can also use Tab.
     7. Hit insert to insert the document.
-    
+  2. Using the Mongo shell
+    1. Inserting a lot of documents at the same time can lead to conflicts with duplicate data.
+    2. When inserting a collection to a db with the collection, there will be a key error.
+      1. A document with this exact id value already exists in the collection
+      2. Using drop removes the dupe data from the db, preventing the conflict.
+    3. Insert is another way, besides importing entire collections.
+      1. Let's try replicating the duplicate ID error.
+      2. Connect to ATLAS server, then navigate to collection.
+      3. Get a random doc from collection
+        1. collection.findOne() finds a singular document with a given query, or returns a document so you can see its general structure.
+      4. Copy the random document.
+      5. Insert it into the collection with collection.insert() with the input being the document
+      6. Error reading:
+        1. "nInserted" == number of inserted documents after this command
+        2. "writeError" == writing doc to collection didn't succeed, so we can't add dupe IDs to a collection.
+      7. If we insert without an _id field, it will work.
+        1. "nInserted" == 1, the number of docs we tried to insert (hopefully)
+        2. If we query everything with the fields we entered (it was dupe), they all look alike except for _id
+        3. _id will be autoassigned, with a unique ObjectId object.
+        4. There's also ways to prevent dupe data insertion with MongoDB outside of IDs.
