@@ -1,1 +1,16 @@
-
+1. Inserting Documents to Collections
+  1. UI
+    1. Add entry by hitting insert document bottom at top right of collections view.
+    2. Two views, using JSON notation with "{}" menu or with one field-value pair at a time using the default view.
+    3. _id field value will already be populated.
+      1. Every doc must have an _id field, and each document in a collection must have a unique id.
+      2. This separates them from other documents with the same other values.
+      3. Collections also don't have to be isodimensional.
+      4. Nothing prevents all same or all different data.
+        1. But this isn't best practice, at all.
+    4. When inserting a document, the _id field is populated with type ObjectId. It doesn't have to be this, but it's created by default to ensure uniqueness.
+      1. If you have another unique value, you can use that for _id instead
+    5. Good practice to keep records relatively consistent.
+    6. Use mouse to move from field to value + add new fields. You can also use Tab.
+    7. Hit insert to insert the document.
+    
