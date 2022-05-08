@@ -41,4 +41,9 @@
       1. If a document is inserted in order, the first with an ID is inserted, the second is not and the process stops.
     5. If a collection doesn't exist on insertion, it is created.
     6. If a db doesn't exist, it can be created using the "use name_of_db" command. If no collection is added to it, it will not be saved to the Atlas cluster.
-    
+2. Updating Documents
+  1. UI
+    1. You can have an object (document) field, or an array field.
+      1. Including objects in arrays
+    2. Looking at a doc, in the top right there's options to edit, copy, clone, or delete.
+    3. 
