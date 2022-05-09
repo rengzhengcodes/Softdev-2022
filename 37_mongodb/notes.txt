@@ -64,3 +64,17 @@
           2. Adds an array field if field doesn't exist.
       2. updateMany()
         1. Update all documents matching a query.
+3. Deleting Documents and Collections
+  1. UI -- garbage can button
+  2. Shell
+    1. deleteOne()
+      1. Removes 1 doc from database
+      2. Only a good idea if using "_id" as it guarantees only doc matching query is deleted.
+      3. Can't rely on *One() methods to return the same doc all the time if values are shared, except _id values since they're unique.
+      4. "deletedCount" == how many were deleted
+    2. deleteMany()
+      1. Removes all matching queries
+    3. Dropping (Collections)
+      1. --drop flag in importing to drop collection while importing.
+      2. collection.drop() in shell.
+        1. Deletes all docs inside as well
