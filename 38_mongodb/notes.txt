@@ -26,7 +26,8 @@ Query Operators:
   - {$expr: {expression}}
   - also allows variables and conditional expressions
    - uses $ to denote field variable
-   
+   - changes all comparison/logic operators into arrays with aggregation
+    - Syntax: {$expr :{ $operator : ["$value", "$value2"]}}
   
 Update Operators:
  - modify data
