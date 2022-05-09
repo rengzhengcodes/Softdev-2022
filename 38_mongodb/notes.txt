@@ -20,7 +20,13 @@ Query Operators:
   - syntax: {operator: [{statement1}, ...]}
   - $not - negation of query
   - syntax: {$not: {statement}}
- 
+ - expressive query operator
+  - $expr -- it can do more than 1 simple operation
+  - allows the use of aggregation expressions within query
+  - {$expr: {expression}}
+  - also allows variables and conditional expressions
+   - uses $ to denote field variable
+   
   
 Update Operators:
  - modify data
