@@ -14,6 +14,7 @@ Query Operators:
  - logic operators
   - $and - all queries true
    - implicit when not specified
+   - explicit and when including the same operator more than once in a query
   - $or - at least one query true
   - $nor - not or
   - syntax: {operator: [{statement1}, ...]}
