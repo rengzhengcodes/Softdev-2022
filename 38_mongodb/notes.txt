@@ -13,8 +13,9 @@ Query Operators:
  - need db.collection.command() to query it
  - logic operators
   - $and - all queries true
+   - implicit when not specified
   - $or - at least one query true
-  - $nor - not and
+  - $nor - not or
   - syntax: {operator: [{statement1}, ...]}
   - $not - negation of query
   - syntax: {$not: {statement}}
