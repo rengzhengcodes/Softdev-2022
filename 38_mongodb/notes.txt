@@ -10,5 +10,15 @@ Query Operators:
   - $lte: <=
   - syntax: {field: {operator:value}}
   - $eq is implicit when using find in a fashion where you're providing a field:value pair.
+ - need db.collection.command() to query it
+ - logic operators
+  - $and - all queries true
+  - $or - at least one query true
+  - $nor - not and
+  - syntax: {operator: [{statement1}, ...]}
+  - $not - negation of query
+  - syntax: {$not: {statement}}
+ 
+  
 Update Operators:
  - modify data
