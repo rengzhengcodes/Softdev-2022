@@ -1,1 +1,14 @@
-
+Query Operators:
+ - additional way to modify queries
+ - used with $
+ - comparison operators
+  - $eq: ==
+  - $ne: !=
+  - $gt: >
+  - $lt: <
+  - $gte: >=
+  - $lte: <=
+  - syntax: {field: {operator:value}}
+  - $eq is implicit when using find in a fashion where you're providing a field:value pair.
+Update Operators:
+ - modify data
