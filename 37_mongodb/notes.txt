@@ -50,3 +50,17 @@
     4. If you click add a new element, you have the choice of where to add/nest it, if it's on the same line as a nestable item.
     5. Remember, maintain consistency.
     6. Hit update to update.
+  2. Shell
+    1. MQL - MongoDB query language.
+      1. updateOne()
+        1. Updates 1 document matching the query (whichever was found first).
+        2. param 1: query - {key:value}
+        3. param 2: {"update_operator": {field: value, ...}}
+        4. "matchedCount" == matched query return
+        5. "modifiedCount" == amount modified
+        6. Fieldname errors with the "$set" operator creates a new field if one doesn't exist already.
+        7. Updating array fields
+          1. Push operator, {$push: {field:value, ..}}
+          2. Adds an array field if field doesn't exist.
+      2. updateMany()
+        1. Update all documents matching a query.
